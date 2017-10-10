@@ -67,6 +67,7 @@
 		27DA38141F8C6A9700E7E13A /* RecentDialyListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38131F8C6A9700E7E13A /* RecentDialyListTableViewController.m */; };
 		27DA38181F8C6D6600E7E13A /* DialyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38171F8C6D6600E7E13A /* DialyModel.m */; };
 		27DA381B1F8C6F1800E7E13A /* DialyInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA381A1F8C6F1800E7E13A /* DialyInfoTableViewCell.m */; };
+		27DA38211F8CBE1300E7E13A /* DialyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */; };
 		D45AA902CA3FD8E7E14F3BD6 /* libPods-CherryGrownDialy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,8 @@
 		27DA38171F8C6D6600E7E13A /* DialyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyModel.m; sourceTree = "<group>"; };
 		27DA38191F8C6F1800E7E13A /* DialyInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyInfoTableViewCell.h; sourceTree = "<group>"; };
 		27DA381A1F8C6F1800E7E13A /* DialyInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyInfoTableViewCell.m; sourceTree = "<group>"; };
+		27DA381F1F8CBE1300E7E13A /* DialyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyDetailViewController.h; sourceTree = "<group>"; };
+		27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyDetailViewController.m; sourceTree = "<group>"; };
 		40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CherryGrownDialy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACDF9D250B7B20ECEC6448 /* Pods-CherryGrownDialy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.debug.xcconfig"; sourceTree = "<group>"; };
 		890AFF13A534D817E03DAC7C /* Pods-CherryGrownDialy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				27547DB41F89F4C60033288C /* DialyInputViewController.m */,
 				27DA38191F8C6F1800E7E13A /* DialyInfoTableViewCell.h */,
 				27DA381A1F8C6F1800E7E13A /* DialyInfoTableViewCell.m */,
+				27DA381F1F8CBE1300E7E13A /* DialyDetailViewController.h */,
+				27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -711,6 +716,7 @@
 				279E319B1F88ACB1004C3531 /* JYJKRequestObservice.m in Sources */,
 				279E31A41F88B179004C3531 /* HttpUrlHelper.m in Sources */,
 				279E31991F88ACAD004C3531 /* JYJKRequest.m in Sources */,
+				27DA38211F8CBE1300E7E13A /* DialyDetailViewController.m in Sources */,
 				279E31CD1F88D602004C3531 /* AlbumStartViewController.m in Sources */,
 				279E31CA1F88D5BB004C3531 /* PhotoStartViewController.m in Sources */,
 				279C94F61F8751630061C8EE /* InitializeUtil.m in Sources */,

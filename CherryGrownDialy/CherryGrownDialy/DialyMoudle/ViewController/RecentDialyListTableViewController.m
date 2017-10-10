@@ -77,7 +77,11 @@
     return cell;
 }
 
-
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DialyModel* model = self.dialyModels[indexPath.row];
+    [DialyViewControllerManager entryDialyDetailPage:model.id];
+}
 
 
 @end
