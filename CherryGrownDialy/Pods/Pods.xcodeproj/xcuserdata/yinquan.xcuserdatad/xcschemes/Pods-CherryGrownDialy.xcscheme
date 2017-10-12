@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A45693F37A9EB8A04276FA634D10F56A'
+               BlueprintIdentifier = '954B250C653D78903930911D7271297B'
                BlueprintName = 'Pods-CherryGrownDialy'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-CherryGrownDialy.a'>

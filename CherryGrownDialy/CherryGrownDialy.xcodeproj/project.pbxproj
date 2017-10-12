@@ -58,6 +58,11 @@
 		279E31C71F88D5AD004C3531 /* DialyStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31C61F88D5AD004C3531 /* DialyStartViewController.m */; };
 		279E31CA1F88D5BB004C3531 /* PhotoStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31C91F88D5BB004C3531 /* PhotoStartViewController.m */; };
 		279E31CD1F88D602004C3531 /* AlbumStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31CC1F88D602004C3531 /* AlbumStartViewController.m */; };
+		27A53FF81F8F38E5005E4164 /* PhotoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A53FF71F8F38E5005E4164 /* PhotoInfoModel.m */; };
+		27A53FFB1F8F396B005E4164 /* PhotoMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A53FFA1F8F396B005E4164 /* PhotoMoudleUtil.m */; };
+		27A53FFE1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A53FFD1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m */; };
+		27A540011F8F39CA005E4164 /* PhotoViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540001F8F39CA005E4164 /* PhotoViewControllerManager.m */; };
+		27A540041F8F41C2005E4164 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540031F8F41C2005E4164 /* PhotoTableViewCell.m */; };
 		27DA380C1F8C687900E7E13A /* SegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38001F8C687900E7E13A /* SegmentBar.m */; };
 		27DA380D1F8C687900E7E13A /* SegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38021F8C687900E7E13A /* SegmentCell.m */; };
 		27DA380E1F8C687900E7E13A /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38051F8C687900E7E13A /* SegmentViewController.m */; };
@@ -174,6 +179,16 @@
 		279E31C91F88D5BB004C3531 /* PhotoStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoStartViewController.m; sourceTree = "<group>"; };
 		279E31CB1F88D602004C3531 /* AlbumStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumStartViewController.h; sourceTree = "<group>"; };
 		279E31CC1F88D602004C3531 /* AlbumStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumStartViewController.m; sourceTree = "<group>"; };
+		27A53FF61F8F38E5005E4164 /* PhotoInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoInfoModel.h; sourceTree = "<group>"; };
+		27A53FF71F8F38E5005E4164 /* PhotoInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoInfoModel.m; sourceTree = "<group>"; };
+		27A53FF91F8F396B005E4164 /* PhotoMoudleUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoMoudleUtil.h; sourceTree = "<group>"; };
+		27A53FFA1F8F396B005E4164 /* PhotoMoudleUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMoudleUtil.m; sourceTree = "<group>"; };
+		27A53FFC1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResentlyPhotoListTableViewController.h; sourceTree = "<group>"; };
+		27A53FFD1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResentlyPhotoListTableViewController.m; sourceTree = "<group>"; };
+		27A53FFF1F8F39CA005E4164 /* PhotoViewControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewControllerManager.h; sourceTree = "<group>"; };
+		27A540001F8F39CA005E4164 /* PhotoViewControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewControllerManager.m; sourceTree = "<group>"; };
+		27A540021F8F41C2005E4164 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
+		27A540031F8F41C2005E4164 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
 		27DA37FF1F8C687900E7E13A /* SegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBar.h; sourceTree = "<group>"; };
 		27DA38001F8C687900E7E13A /* SegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBar.m; sourceTree = "<group>"; };
 		27DA38011F8C687900E7E13A /* SegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentCell.h; sourceTree = "<group>"; };
@@ -288,6 +303,7 @@
 		279C94CA1F874A180061C8EE /* CherryGrownDialy */ = {
 			isa = PBXGroup;
 			children = (
+				27A53FF31F8F38CE005E4164 /* PhotoMoudle */,
 				27547DA81F89F3F60033288C /* DialyMoudle */,
 				279E31BB1F88D47F004C3531 /* HomePages */,
 				279C94ED1F874E090061C8EE /* ViewControllerManager */,
@@ -498,6 +514,39 @@
 			path = HomePages;
 			sourceTree = "<group>";
 		};
+		27A53FF31F8F38CE005E4164 /* PhotoMoudle */ = {
+			isa = PBXGroup;
+			children = (
+				27A53FF41F8F38CE005E4164 /* DataModel */,
+				27A53FF51F8F38CE005E4164 /* ViewController */,
+				27A53FF91F8F396B005E4164 /* PhotoMoudleUtil.h */,
+				27A53FFA1F8F396B005E4164 /* PhotoMoudleUtil.m */,
+				27A53FFF1F8F39CA005E4164 /* PhotoViewControllerManager.h */,
+				27A540001F8F39CA005E4164 /* PhotoViewControllerManager.m */,
+			);
+			path = PhotoMoudle;
+			sourceTree = "<group>";
+		};
+		27A53FF41F8F38CE005E4164 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				27A53FF61F8F38E5005E4164 /* PhotoInfoModel.h */,
+				27A53FF71F8F38E5005E4164 /* PhotoInfoModel.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		27A53FF51F8F38CE005E4164 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27A53FFC1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.h */,
+				27A53FFD1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m */,
+				27A540021F8F41C2005E4164 /* PhotoTableViewCell.h */,
+				27A540031F8F41C2005E4164 /* PhotoTableViewCell.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		27DA37FE1F8C687900E7E13A /* SegmentTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,12 +735,15 @@
 				279E31C41F88D59A004C3531 /* MainStartViewController.m in Sources */,
 				279E31BE1F88D497004C3531 /* HomeTabbarViewController.m in Sources */,
 				279C95191F8774CA0061C8EE /* UIColor+Standand.m in Sources */,
+				27A540011F8F39CA005E4164 /* PhotoViewControllerManager.m in Sources */,
 				279E319E1F88ACBD004C3531 /* JYJKHttpRequest.m in Sources */,
+				27A53FF81F8F38E5005E4164 /* PhotoInfoModel.m in Sources */,
 				27547DBF1F8A075E0033288C /* UIView+SizeExtension.m in Sources */,
 				279E319D1F88ACB9004C3531 /* JYJKHttpJsonRequest.m in Sources */,
 				27DA38141F8C6A9700E7E13A /* RecentDialyListTableViewController.m in Sources */,
 				279E319A1F88ACAF004C3531 /* JYJKRequestManager.m in Sources */,
 				2723F6061F8B26140036B919 /* SelectTagsView.m in Sources */,
+				27A53FFE1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m in Sources */,
 				27DA380C1F8C687900E7E13A /* SegmentBar.m in Sources */,
 				27DA38111F8C687900E7E13A /* UIViewController+Segment.m in Sources */,
 				27547DAC1F89F40C0033288C /* DialyViewControllerManager.m in Sources */,
@@ -721,6 +773,8 @@
 				279E31CA1F88D5BB004C3531 /* PhotoStartViewController.m in Sources */,
 				279C94F61F8751630061C8EE /* InitializeUtil.m in Sources */,
 				2723F6001F8B18260036B919 /* TagsSelectViewController.m in Sources */,
+				27A53FFB1F8F396B005E4164 /* PhotoMoudleUtil.m in Sources */,
+				27A540041F8F41C2005E4164 /* PhotoTableViewCell.m in Sources */,
 				27547DC61F8A0E190033288C /* AppendDialyRequest.m in Sources */,
 				279C951D1F8775EE0061C8EE /* NSObject+AlertExtension.m in Sources */,
 				279E31A11F88AD9B004C3531 /* NSObject+Compare.m in Sources */,

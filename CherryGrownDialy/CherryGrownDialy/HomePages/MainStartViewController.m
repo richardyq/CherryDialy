@@ -31,7 +31,7 @@
     RecentDialyListTableViewController* resentDialysViewController = [[RecentDialyListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [resentDialysViewController setTitle:@"最近日记"];
     
-    UIViewController* resentPhotosViewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    ResentlyPhotoListTableViewController* resentPhotosViewController = [[ResentlyPhotoListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [resentPhotosViewController setTitle:@"最近照片"];
     
     [segmentController setViewControllers:@[resentDialysViewController, resentPhotosViewController]];

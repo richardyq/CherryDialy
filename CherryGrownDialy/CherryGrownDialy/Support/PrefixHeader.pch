@@ -20,7 +20,7 @@
 #import "AFNetworking.h"
 #import "MJExtension.h"
 #import "MBProgressHUD.h"
-
+#import "UIImageView+WebCache.h"
 
 #import "CommonUtil.h"
 #import "ViewControllerManager.h"
@@ -29,4 +29,5 @@
 #import "UserMoudleUtil.h"
 #import "CategoryMoudleUtil.h"
 #import "DialyMoudleUtil.h"
+#import "PhotoMoudleUtil.h"
 #endif /* PrefixHeader_pch */
