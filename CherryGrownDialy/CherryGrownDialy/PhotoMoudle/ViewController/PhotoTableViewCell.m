@@ -89,6 +89,7 @@
         PhotoInfoCell* control = [[PhotoInfoCell alloc] init];
         [self.contentView addSubview:control];
         [controls addObject:control];
+        [control addTarget:self action:@selector(photoCellClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     photoCells = controls;
@@ -110,6 +111,18 @@
         }];
         cellLeft = control.mas_right;
     }];
+}
+
+- (void) photoCellClick:(id) sender
+{
+    if (![sender isKindOfClass:[PhotoInfoCell class]]) {
+        return;
+    }
+    NSInteger clickIndex = [photoCells indexOfObject:sender];
+    if (self.selectDelegate && [self.selectDelegate respondsToSelector:@selector(photoControlSelect:)])
+    {
+        [self.selectDelegate photoControlSelect:clickIndex + (self.cellRow * 4)];
+    }
 }
 
 - (void) setPhotoInfos:(NSArray<PhotoInfoModel *>*) photoInfos{

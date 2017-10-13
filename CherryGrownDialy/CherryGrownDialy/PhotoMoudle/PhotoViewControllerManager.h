@@ -11,4 +11,5 @@
 
 @interface PhotoViewControllerManager : NSObject
 
++ (void) entryPhotoDetailPage:(NSArray<PhotoInfoModel*> *) photos currentIndex:(NSInteger) index;
 @end

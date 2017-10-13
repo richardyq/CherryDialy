@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoControlSelectDelegate.h"
+
 
 @interface PhotoInfoCell : UIControl
 
@@ -17,6 +19,10 @@
 
 @interface PhotoTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) id<PhotoControlSelectDelegate> selectDelegate;
+@property (nonatomic, assign) NSInteger cellRow;
+
 - (void) setPhotoInfos:(NSArray<PhotoInfoModel *>*) photoInfos;
+
 
 @end

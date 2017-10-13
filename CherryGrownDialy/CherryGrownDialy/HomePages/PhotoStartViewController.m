@@ -11,7 +11,8 @@
 
 @interface PhotoStartViewController ()
 <UITableViewDelegate,
-UITableViewDataSource>
+UITableViewDataSource,
+PhotoControlSelectDelegate>
 
 @property (nonatomic, strong) CategorySelectedControl* categoryControl;
 @property (nonatomic, readonly) CategoryModel* categoryModel;
@@ -138,7 +139,8 @@ UITableViewDataSource>
     
     NSArray* photos = [self.photoModels subarrayWithRange:subRange];
     [cell setPhotoInfos:photos];
-    
+    [cell setCellRow:indexPath.row];
+    [cell setSelectDelegate:self];
     return cell;
 }
 
@@ -186,5 +188,10 @@ UITableViewDataSource>
         [_photoTableView setDataSource:self];
     }
     return _photoTableView;
+}
+
+#pragma mark - PhotoControlSelectDelegate
+- (void) photoControlSelect:(NSInteger) selectIndex{
+    [PhotoViewControllerManager entryPhotoDetailPage:self.photoModels currentIndex:selectIndex];
 }
 @end
