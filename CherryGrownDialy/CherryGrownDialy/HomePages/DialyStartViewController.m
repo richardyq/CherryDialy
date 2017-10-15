@@ -22,6 +22,7 @@ UITableViewDataSource>
 @property (nonatomic, strong) UITableView* dialyTableView;
 
 @property (nonatomic, strong) NSMutableArray* dialyModels;
+@property (nonatomic, assign) NSInteger totalCount;
 @end
 
 @implementation DialyStartViewController
@@ -33,10 +34,11 @@ UITableViewDataSource>
     
     UIBarButtonItem* appendBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(appendDialyButtonClicked:)];
     [self.navigationItem setRightBarButtonItem:appendBarButton];
-    
+    _selectedTagModels = [NSMutableArray array];
     [self layoutElements];
     
-    [self makeTestDialyData];
+//    [self makeTestDialyData];
+    [self startLoadDialyList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +51,7 @@ UITableViewDataSource>
     
 }
 
+#if 0
 - (void) makeTestDialyData{
     NSMutableArray* models = [NSMutableArray array];
     for (NSInteger index = 0; index < 15; ++index)
@@ -65,6 +68,8 @@ UITableViewDataSource>
     }
     _dialyModels = [NSMutableArray arrayWithArray:models];
 }
+
+#endif
 
 - (void) appendDialyButtonClicked:(id) sender{
     [DialyViewControllerManager entryDialyInputPage];
@@ -89,6 +94,58 @@ UITableViewDataSource>
     }];
 }
 
+- (void) startLoadDialyList{
+    self.dialyTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startLoadDialyListRequest)];
+    MJRefreshNormalHeader* refHeader = (MJRefreshNormalHeader*)self.dialyTableView.mj_header;
+    refHeader.lastUpdatedTimeLabel.hidden = YES;
+    [self.dialyTableView.mj_header beginRefreshing];
+}
+
+- (void) startLoadDialyListRequest{
+    NSInteger cateId = 0;
+    __block NSString* tags = nil;
+    if(self.categoryModel){
+        cateId = self.categoryModel.id;
+    }
+    if(self.selectedTagModels){
+        [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (!tags || tags.length == 0) {
+                tags = tagModel.name;
+            }
+            else{
+                tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
+            }
+        }];
+    }
+    
+    [DialyMoudleUtil startGetDialyList:0 rows:20 cateId:cateId tags:tags observiceObject:self resultSelector:@selector(dialyListLoaded:) returnSelector:@selector(dialyListReturn:)];
+}
+
+- (void) startloadMoreDialyList{
+    NSInteger cateId = 0;
+    __block NSString* tags = nil;
+    if(self.categoryModel){
+        cateId = self.categoryModel.id;
+    }
+    if(self.selectedTagModels){
+        [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (!tags || tags.length == 0) {
+                tags = tagModel.name;
+            }
+            else{
+                tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
+            }
+        }];
+    }
+    NSInteger startRows = 0;
+    if (self.dialyModels) {
+        startRows = self.dialyModels.count;
+    }
+    
+    
+    [DialyMoudleUtil startGetDialyList:startRows rows:20 cateId:cateId tags:tags observiceObject:self resultSelector:@selector(moreDialyListLoaded:) returnSelector:@selector(dialyListReturn:)];
+}
+
 #pragma mark - control click event
 - (void) categoryControlClicked:(id) sender
 {
@@ -97,6 +154,7 @@ UITableViewDataSource>
         _categoryModel = model;
         
         //TODO:refresh tableview
+        [self startLoadDialyList];
     }];
 }
 
@@ -119,6 +177,7 @@ UITableViewDataSource>
         [weakSelf.tagControl setSelectTagModels:weakSelf.selectedTagModels];
         
         //TODO:refresh tableview
+        [weakSelf startLoadDialyList];
     }];
 }
 
@@ -189,4 +248,58 @@ UITableViewDataSource>
     }
     return _dialyTableView;
 }
+
+- (void) resetTableFooter
+{
+    if (self.dialyModels.count < self.totalCount)
+    {
+        [self.dialyTableView.mj_footer endRefreshing];
+        self.dialyTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(startloadMoreDialyList)];
+    }
+    else
+    {
+        [self.dialyTableView.mj_footer endRefreshingWithNoMoreData];
+    }
+}
+
+#pragma mark - Request CallBack
+- (void) dialyListLoaded:(id) result{
+    if (result && [result isKindOfClass:[DialyModelList class]]) {
+        DialyModelList* dialyModelList = (DialyModelList*) result;
+        
+        _totalCount = dialyModelList.totalCount;
+        if (_dialyModels) {
+            [_dialyModels removeAllObjects];
+        }
+        _dialyModels = [NSMutableArray arrayWithArray:dialyModelList.list];
+    }
+}
+
+- (void) dialyListReturn:(JYJKRequestRetModel*) retModel{
+    [self.dialyTableView.mj_header endRefreshing];
+    if (retModel.errorCode != Error_None) {
+        [self showAlertMessage:retModel.errorMessage];
+        return;
+    }
+    [self.dialyTableView reloadData];
+    
+    [self resetTableFooter];
+}
+
+- (void) moreDialyListLoaded:(id) result{
+    if (result && [result isKindOfClass:[DialyModelList class]]) {
+        DialyModelList* dialyModelList = (DialyModelList*) result;
+        _totalCount = dialyModelList.totalCount;
+        if (_dialyModels) {
+            [_dialyModels addObjectsFromArray:dialyModelList.list];
+            
+        }
+        else{
+            _dialyModels = [NSMutableArray arrayWithArray:dialyModelList.list];
+        }
+        
+    }
+}
+
+
 @end

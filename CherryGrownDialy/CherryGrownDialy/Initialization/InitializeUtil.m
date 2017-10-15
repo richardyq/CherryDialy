@@ -90,9 +90,9 @@
 
 - (void) userHasBeenLogined{
     //获取分类列表
- //   [self performSelector:@selector(loadCategoryList) withObject:nil afterDelay:0.5];
-    [self performSelector:@selector(entryMainPage) withObject:nil afterDelay:0.5];
-//    [self loadCategoryList];
+    [self performSelector:@selector(loadCategoryList) withObject:nil afterDelay:0.5];
+    //[self performSelector:@selector(entryMainPage) withObject:nil afterDelay:0.5];
+    [self loadCategoryList];
     
 }
 
@@ -145,7 +145,7 @@
     }
     
     //获取标签列表成功，进入首页
-    
+    [self performSelector:@selector(entryMainPage) withObject:nil afterDelay:0.5];
 }
 
 - (void) entryMainPage{

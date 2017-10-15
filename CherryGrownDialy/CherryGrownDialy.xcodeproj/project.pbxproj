@@ -65,6 +65,10 @@
 		27A540041F8F41C2005E4164 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540031F8F41C2005E4164 /* PhotoTableViewCell.m */; };
 		27A540081F8F6145005E4164 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540071F8F6145005E4164 /* PhotoDetailViewController.m */; };
 		27A5400B1F8F6A05005E4164 /* PhotoImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A5400A1F8F6A05005E4164 /* PhotoImageViewController.m */; };
+		27D1F4171F920327007DE94B /* ResentDialyListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F4161F920327007DE94B /* ResentDialyListRequest.m */; };
+		27D1F41A1F9206C2007DE94B /* DialyModelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F4191F9206C2007DE94B /* DialyModelList.m */; };
+		27D1F41D1F92077F007DE94B /* GetDialyListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F41C1F92077F007DE94B /* GetDialyListRequest.m */; };
+		27D1F4201F92F429007DE94B /* GetDialyDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F41F1F92F429007DE94B /* GetDialyDetailRequest.m */; };
 		27DA380C1F8C687900E7E13A /* SegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38001F8C687900E7E13A /* SegmentBar.m */; };
 		27DA380D1F8C687900E7E13A /* SegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38021F8C687900E7E13A /* SegmentCell.m */; };
 		27DA380E1F8C687900E7E13A /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38051F8C687900E7E13A /* SegmentViewController.m */; };
@@ -196,6 +200,14 @@
 		27A540071F8F6145005E4164 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		27A540091F8F6A05005E4164 /* PhotoImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoImageViewController.h; sourceTree = "<group>"; };
 		27A5400A1F8F6A05005E4164 /* PhotoImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoImageViewController.m; sourceTree = "<group>"; };
+		27D1F4151F920327007DE94B /* ResentDialyListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResentDialyListRequest.h; sourceTree = "<group>"; };
+		27D1F4161F920327007DE94B /* ResentDialyListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResentDialyListRequest.m; sourceTree = "<group>"; };
+		27D1F4181F9206C2007DE94B /* DialyModelList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyModelList.h; sourceTree = "<group>"; };
+		27D1F4191F9206C2007DE94B /* DialyModelList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyModelList.m; sourceTree = "<group>"; };
+		27D1F41B1F92077F007DE94B /* GetDialyListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDialyListRequest.h; sourceTree = "<group>"; };
+		27D1F41C1F92077F007DE94B /* GetDialyListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetDialyListRequest.m; sourceTree = "<group>"; };
+		27D1F41E1F92F429007DE94B /* GetDialyDetailRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDialyDetailRequest.h; sourceTree = "<group>"; };
+		27D1F41F1F92F429007DE94B /* GetDialyDetailRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetDialyDetailRequest.m; sourceTree = "<group>"; };
 		27DA37FF1F8C687900E7E13A /* SegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentBar.h; sourceTree = "<group>"; };
 		27DA38001F8C687900E7E13A /* SegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentBar.m; sourceTree = "<group>"; };
 		27DA38011F8C687900E7E13A /* SegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentCell.h; sourceTree = "<group>"; };
@@ -285,6 +297,12 @@
 			children = (
 				27547DC41F8A0E190033288C /* AppendDialyRequest.h */,
 				27547DC51F8A0E190033288C /* AppendDialyRequest.m */,
+				27D1F4151F920327007DE94B /* ResentDialyListRequest.h */,
+				27D1F4161F920327007DE94B /* ResentDialyListRequest.m */,
+				27D1F41B1F92077F007DE94B /* GetDialyListRequest.h */,
+				27D1F41C1F92077F007DE94B /* GetDialyListRequest.m */,
+				27D1F41E1F92F429007DE94B /* GetDialyDetailRequest.h */,
+				27D1F41F1F92F429007DE94B /* GetDialyDetailRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -584,6 +602,8 @@
 			children = (
 				27DA38161F8C6D6600E7E13A /* DialyModel.h */,
 				27DA38171F8C6D6600E7E13A /* DialyModel.m */,
+				27D1F4181F9206C2007DE94B /* DialyModelList.h */,
+				27D1F4191F9206C2007DE94B /* DialyModelList.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -745,6 +765,7 @@
 				279C94F91F8751E10061C8EE /* CommonDataHelper.m in Sources */,
 				279C95201F877FF20061C8EE /* UIImage+Shape.m in Sources */,
 				27DA381B1F8C6F1800E7E13A /* DialyInfoTableViewCell.m in Sources */,
+				27D1F4201F92F429007DE94B /* GetDialyDetailRequest.m in Sources */,
 				279E31C41F88D59A004C3531 /* MainStartViewController.m in Sources */,
 				279E31BE1F88D497004C3531 /* HomeTabbarViewController.m in Sources */,
 				279C95191F8774CA0061C8EE /* UIColor+Standand.m in Sources */,
@@ -752,6 +773,8 @@
 				279E319E1F88ACBD004C3531 /* JYJKHttpRequest.m in Sources */,
 				27A53FF81F8F38E5005E4164 /* PhotoInfoModel.m in Sources */,
 				27547DBF1F8A075E0033288C /* UIView+SizeExtension.m in Sources */,
+				27D1F4171F920327007DE94B /* ResentDialyListRequest.m in Sources */,
+				27D1F41A1F9206C2007DE94B /* DialyModelList.m in Sources */,
 				279E319D1F88ACB9004C3531 /* JYJKHttpJsonRequest.m in Sources */,
 				27DA38141F8C6A9700E7E13A /* RecentDialyListTableViewController.m in Sources */,
 				279E319A1F88ACAF004C3531 /* JYJKRequestManager.m in Sources */,
@@ -779,6 +802,7 @@
 				279E31C71F88D5AD004C3531 /* DialyStartViewController.m in Sources */,
 				27547DAF1F89F41E0033288C /* DialyMoudleUtil.m in Sources */,
 				279C94F31F874F3C0061C8EE /* ViewControllerManager.m in Sources */,
+				27D1F41D1F92077F007DE94B /* GetDialyListRequest.m in Sources */,
 				279E319B1F88ACB1004C3531 /* JYJKRequestObservice.m in Sources */,
 				279E31A41F88B179004C3531 /* HttpUrlHelper.m in Sources */,
 				279E31991F88ACAD004C3531 /* JYJKRequest.m in Sources */,

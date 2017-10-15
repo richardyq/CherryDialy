@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "DialyModel.h"
+#import "DialyModelList.h"
+
 
 #import "DialyViewControllerManager.h"
 
@@ -25,4 +27,32 @@
            resultSelector:(SEL) resultSelector
            returnSelector:(SEL) returnSelector;
 
+/*
+ getResentDialyList
+ 获取最近的日记
+ */
++ (void) getResentDialyList:(id) object
+             resultSelector:(SEL) resultSelector
+             returnSelector:(SEL) returnSelector;
+
+/*
+ 获取日记列表
+ */
++ (void) startGetDialyList:(NSInteger) startRow
+                      rows:(NSInteger) rows
+                    cateId:(NSInteger) cateId
+                      tags:(NSString*) tags
+           observiceObject:(id) object
+            resultSelector:(SEL) resultSelector
+            returnSelector:(SEL) returnSelector;
+
+/*
+ startGetDialyDetail
+ 获取日记详情
+ dialyId 日记Id
+ */
++ (void) startGetDialyDetail:(NSInteger) dialyId
+             observiceObject:(id) object
+              resultSelector:(SEL) resultSelector
+              returnSelector:(SEL) returnSelector;
 @end

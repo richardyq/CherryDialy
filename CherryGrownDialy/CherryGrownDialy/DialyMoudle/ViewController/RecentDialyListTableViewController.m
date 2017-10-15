@@ -20,12 +20,25 @@
     [super viewDidLoad];
     [self.tableView setBackgroundColor:[UIColor commonBackgroundColor]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self makeTestDialyData];
+    //[self makeTestDialyData];
+    
+    [self startGetResentlyDialyList];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) startGetResentlyDialyList{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startGetResentlyDialyListRequest)];
+    MJRefreshNormalHeader* refHeader = (MJRefreshNormalHeader*)self.tableView.mj_header;
+    refHeader.lastUpdatedTimeLabel.hidden = YES;
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void) startGetResentlyDialyListRequest{
+    [DialyMoudleUtil getResentDialyList:self resultSelector:@selector(resentlyDialyListLoaded:) returnSelector:@selector(resentlyDialyListReturn:)];
 }
 
 - (void) makeTestDialyData{
@@ -83,5 +96,19 @@
     [DialyViewControllerManager entryDialyDetailPage:model.id];
 }
 
+#pragma mark - Request CallBack
+- (void) resentlyDialyListLoaded:(id) result{
+    if (result && [result isKindOfClass:[NSArray class]]) {
+        _dialyModels = (NSArray<DialyModel*>*) result;
+    }
+}
 
+- (void) resentlyDialyListReturn:(JYJKRequestRetModel*) retModel{
+    [self.tableView.mj_header endRefreshing];
+    if (retModel.errorCode != Error_None) {
+        [self showAlertMessage:retModel.errorMessage];
+        return;
+    }
+    [self.tableView reloadData];
+}
 @end

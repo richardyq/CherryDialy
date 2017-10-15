@@ -24,6 +24,11 @@
     return self;
 }
 
+- (void) loadView{
+    UIScrollView* scrollView = [[UIScrollView alloc] init];
+    [self setView:scrollView];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -53,6 +58,28 @@
         if (error) {
             return;
         }
+        
+        CGFloat imageHeight = ScreenWidth * (image.size.height / image.size.width);
+        if (imageHeight < ScreenHeight) {
+            [weakSelf.photoImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.center.equalTo(weakSelf.view);
+                make.width.equalTo(weakSelf.view);
+                make.height.mas_equalTo(@(imageHeight));
+            }];
+            UIScrollView* scrollView = (UIScrollView*) self.view;
+            [scrollView setContentSize:CGSizeMake(ScreenWidth, ScreenHeight)];
+        }
+        else{
+            [weakSelf.photoImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(weakSelf.view);
+                make.top.equalTo(weakSelf.view);
+                make.width.equalTo(weakSelf.view);
+                make.height.mas_equalTo(@(imageHeight));
+            }];
+            UIScrollView* scrollView = (UIScrollView*) self.view;
+            [scrollView setContentSize:CGSizeMake(ScreenWidth, imageHeight)];
+        }
+        
     }];
 }
 

@@ -47,7 +47,13 @@
     
     [self layoutElements];
     
-    [self makeTestDialyData];
+//    [self makeTestDialyData];
+    [self loadDialyModel];
+}
+
+- (void) loadDialyModel{
+    [self showWaitingHub];
+    [DialyMoudleUtil startGetDialyDetail:self.dialyId observiceObject:self resultSelector:@selector(dialyDetailLoaded:) returnSelector:@selector(dialyDetailReturn:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +97,15 @@
     self.detailTextView.attributedText = [[NSAttributedString alloc] initWithString:model.content attributes:attributes];
 }
 
+- (void) dialyDetailReturn:(JYJKRequestRetModel*) retModel{
+    [self closeWaitingHub];
+    if (retModel.errorCode != Error_None) {
+        [self showAlertMessage:retModel.errorMessage];
+        return;
+    }
+}
+
+#if 0
 - (void) makeTestDialyData{
     DialyModel* model = [[DialyModel alloc] init];
     model.id = self.dialyId;
@@ -103,6 +118,7 @@
  
     [self dialyDetailLoaded:model];
 }
+#endif
 
 #pragma mark - settingAndGetting
 
