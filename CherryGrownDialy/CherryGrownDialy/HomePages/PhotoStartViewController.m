@@ -35,6 +35,10 @@ PhotoControlSelectDelegate>
     [self layoutElements];
     
     [self makeTestPhotoData];
+    
+    //添加照片按钮
+    UIBarButtonItem* appendBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(appendPhotoButtonClicked:)];
+    [self.navigationItem setRightBarButtonItem:appendBarButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +109,11 @@ PhotoControlSelectDelegate>
         
         //TODO:refresh tableview
     }];
+}
+
+- (void) appendPhotoButtonClicked:(id) sender
+{
+    [PhotoViewControllerManager entryAppendPhotoPage];
 }
 
 #pragma mark - Table view data source

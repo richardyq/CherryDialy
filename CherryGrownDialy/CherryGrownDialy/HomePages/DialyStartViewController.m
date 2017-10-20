@@ -110,10 +110,10 @@ UITableViewDataSource>
     if(self.selectedTagModels){
         [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
             if (!tags || tags.length == 0) {
-                tags = tagModel.name;
+                tags = [NSString stringWithFormat:@"%ld", (long)tagModel.id];
             }
             else{
-                tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
+                tags = [tags stringByAppendingFormat:@",%ld", (long)tagModel.id];
             }
         }];
     }

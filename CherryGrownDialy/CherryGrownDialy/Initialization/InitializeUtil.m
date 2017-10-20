@@ -91,8 +91,8 @@
 - (void) userHasBeenLogined{
     //获取分类列表
     [self performSelector:@selector(loadCategoryList) withObject:nil afterDelay:0.5];
-    //[self performSelector:@selector(entryMainPage) withObject:nil afterDelay:0.5];
-    [self loadCategoryList];
+    [self performSelector:@selector(entryMainPage) withObject:nil afterDelay:0.5];
+    //[self loadCategoryList];
     
 }
 
