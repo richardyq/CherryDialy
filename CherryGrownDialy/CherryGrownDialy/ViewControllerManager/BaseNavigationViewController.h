@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@interface UIBarButtonItem (BackExtension)
+
++ (UIBarButtonItem *)itemWithImageNamed:(NSString *)imageNamed targe:(id)targe action:(SEL)action;
+
+@end
+
 @interface BaseNavigationViewController : UINavigationController
 
 @end

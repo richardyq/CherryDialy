@@ -1,16 +1,16 @@
 //
-//  AppendPhotoControl.h
+//  AppendPhotoImageModel.h
 //  CherryGrownDialy
 //
 //  Created by yinquan on 2017/10/20.
 //  Copyright © 2017年 yinquan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
+@interface AppendPhotoImageModel : NSObject
 
-@interface AppendPhotoControl : UIControl
-
+@property (nonatomic, strong) UIImage* photoImage;
 @property (nonatomic, strong) UIImage* thumbImage;
 
 @end

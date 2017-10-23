@@ -13,4 +13,13 @@
 
 @interface PhotoMoudleUtil : NSObject
 
++ (void) startUploadPhoto:(NSDictionary*) postParams
+                imageData:(NSData*) imageData
+          observiceObject:(id) object
+           resultSelector:(SEL) resultSelector
+           returnSelector:(SEL) returnSelector;
+
++ (void) startLoadResentlyPhotos:(id) object
+                  resultSelector:(SEL) resultSelector
+                  returnSelector:(SEL) returnSelector;
 @end

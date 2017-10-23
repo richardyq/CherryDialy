@@ -113,7 +113,7 @@
     }];
     
     if (self.segmentCells.count > 4) {
-        cellWidth = contentView.width / 4;
+        //cellWidth = contentView.width / 4;
         [contentView setWidth:cellWidth * self.segmentCells.count];
         [scrollView setContentSize:[contentView size]];
     }

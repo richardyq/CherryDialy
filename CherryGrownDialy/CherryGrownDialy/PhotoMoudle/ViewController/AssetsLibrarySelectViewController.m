@@ -10,7 +10,7 @@
 #import <Photos/Photos.h>
 #import "AssetsLibraryCollectionViewCell.h"
 
-
+#import "AppendPhotoImageModel.h"
 
 
 
@@ -23,12 +23,32 @@
 
 @property (nonatomic, assign) NSInteger limitCount;
 @property (nonatomic,strong) NSMutableArray *photoArray;
-@property (nonatomic, strong) NSMutableArray* selectedArray;
+@property (nonatomic, strong) NSMutableArray<PHAsset*>* selectedArray;
 
+@property (nonatomic, strong) UICollectionView* photoListCollectionView;
 
+@property (nonatomic, strong) UIView* submitView;
+@property (nonatomic, strong) UILabel* submitLabel;
+@property (nonatomic, strong) UIButton* submitButton;
+
+@property (nonatomic, strong) SelectUploadPhotosHandle selectHandle;
 @end
 
 @implementation AssetsLibrarySelectViewController
+
++ (void) showWithLimitCount:(NSInteger) limitCount
+                      hanle:(SelectUploadPhotosHandle) handle
+{
+    AssetsLibrarySelectViewController* selectViewController = [[AssetsLibrarySelectViewController alloc] initWithLimitCount:limitCount];
+    [selectViewController setSelectHandle:handle];
+    
+    BaseNavigationViewController* selectNavigationController = [[BaseNavigationViewController alloc]initWithRootViewController:selectViewController];
+    [selectNavigationController.navigationBar setTranslucent:NO];
+    
+    
+    UINavigationController* topmostNavigationController = [[ViewControllerManager defaultManager] topMostViewController].navigationController;
+    [topmostNavigationController presentViewController:selectNavigationController animated:YES completion:nil];
+}
 
 - (id) initWithLimitCount:(NSInteger) limitCount
 {
@@ -41,27 +61,17 @@
     return self;
 }
 
-- (void) loadView{
-    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    // 自定义的布局对象
-    
-    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds  collectionViewLayout:flowLayout];
-    
-    collectionView.backgroundColor = [UIColor whiteColor];
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
-    [collectionView registerClass:[AssetsLibraryCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([AssetsLibraryCollectionViewCell class])];
-    [self setView:collectionView];
-    
+- (void) backUp{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"选择照片";
-    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageNamed:@"back.png" targe:self action:@selector(backUp)];
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self layoutElements];
     
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusRestricted ||
@@ -74,6 +84,30 @@
         [self loadAllPhotos];
     }
     
+}
+
+- (void) layoutElements
+{
+    [self.photoListCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-64);
+    }];
+    
+    [self.submitView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.photoListCollectionView.mas_bottom);
+    }];
+    
+    [self.submitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.submitView).offset(12.5);
+        make.centerY.equalTo(self.submitView);
+    }];
+    
+    [self.submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.submitView).offset(-12.5);
+        make.size.mas_equalTo(CGSizeMake(75, 29));
+        make.centerY.equalTo(self.submitView);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,12 +133,74 @@
     option.resizeMode = PHImageRequestOptionsResizeModeFast;
     option.synchronous = NO;
     option.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
-    
-    UICollectionView* collectionView = (UICollectionView*) self.view;
-    [collectionView reloadData];
 
+    [self.photoListCollectionView reloadData];
+
+}
+
+#pragma mark - settingAndGetting
+- (UICollectionView*) photoListCollectionView
+{
+    if (!_photoListCollectionView) {
+        UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+        [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+        // 自定义的布局对象
+        
+        _photoListCollectionView = [[UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds  collectionViewLayout:flowLayout];
+        
+        _photoListCollectionView.backgroundColor = [UIColor whiteColor];
+        _photoListCollectionView.dataSource = self;
+        _photoListCollectionView.delegate = self;
+        [_photoListCollectionView registerClass:[AssetsLibraryCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([AssetsLibraryCollectionViewCell class])];
+        [self.view addSubview:_photoListCollectionView];
+        //[self setView:collectionView];
+    }
     
-   
+    return _photoListCollectionView;
+}
+
+- (UIView*) submitView
+{
+    if(!_submitView)
+    {
+        _submitView = [[UIView alloc] init];
+        [self.view addSubview:_submitView];
+        
+        [_submitView showTopLine];
+        [_submitView setBackgroundColor:[UIColor whiteColor]];
+    }
+    return _submitView;
+}
+
+- (UILabel*) submitLabel
+{
+    if (!_submitLabel) {
+        _submitLabel = [[UILabel alloc] init];
+        [_submitLabel setFont:[UIFont systemFontOfSize:14]];
+        [_submitLabel setTextColor:[UIColor commonGrayTextColor]];
+        [self.submitView addSubview:_submitLabel];
+        NSString* totalString = [NSString stringWithFormat:@"已选0张／一共可选%ld张", self.limitCount];
+        [_submitLabel setText:totalString];
+    }
+    return _submitLabel;
+}
+
+- (UIButton*) submitButton{
+    if(!_submitButton){
+        _submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.submitView addSubview:_submitButton];
+        
+        [_submitButton setBackgroundImage:[UIImage rectImage:CGSizeMake(320, 46) Color:[UIColor mainThemeColor]] forState:UIControlStateNormal];
+        [_submitButton setTitle:@"确定" forState:UIControlStateNormal];
+        [_submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_submitButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
+        
+        _submitButton.layer.cornerRadius = 5;
+        _submitButton.layer.masksToBounds = YES;
+        
+        [_submitButton addTarget:self action:@selector(submitButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _submitButton;
 }
 
 #pragma mark ---- UICollectionViewDataSource
@@ -162,6 +258,9 @@
     
     AssetsLibraryCollectionViewCell *cell = (AssetsLibraryCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
     [cell setIsSelected:selected];
+    
+    NSString* totalString = [NSString stringWithFormat:@"已选%ld张／一共可选%ld张", self.selectedArray.count, self.limitCount];
+    [self.submitLabel setText:totalString];
 }
 
 #pragma mark - CollectionFlowLayout
@@ -180,6 +279,61 @@
     return 0;
 }
 
-
+#pragma mark - button click event
+- (void) submitButtonClicked:(id) sender
+{
+    if (!self.selectedArray || self.selectedArray.count == 0) {
+        [self showAlertMessage:@"请选择照片"];
+        return;
+    }
+    
+    NSMutableArray* selectedImageModels = [NSMutableArray array];
+    PHFetchOptions *options = [[PHFetchOptions alloc] init];
+    options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
+    
+    
+    
+    PHImageRequestOptions* orioption = [[PHImageRequestOptions alloc] init];
+    PHImageRequestOptions* thumboption = [[PHImageRequestOptions alloc] init];
+    //设置显示模式
+    /*
+     PHImageRequestOptionsResizeModeNone    //选了这个就不会管传如的size了 ，要自己控制图片的大小，建议还是选Fast
+     PHImageRequestOptionsResizeModeFast    //根据传入的size，迅速加载大小相匹配(略大于或略小于)的图像
+     PHImageRequestOptionsResizeModeExact    //精确的加载与传入size相匹配的图像
+     */
+    orioption.resizeMode = PHImageRequestOptionsResizeModeNone;
+    orioption.synchronous = YES;
+    orioption.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+    
+    thumboption.resizeMode = PHImageRequestOptionsResizeModeFast;
+    thumboption.synchronous = YES;
+    thumboption.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+    [self.selectedArray enumerateObjectsUsingBlock:^(PHAsset * asset, NSUInteger idx, BOOL * _Nonnull stop) {
+        AppendPhotoImageModel* photoModel = [[AppendPhotoImageModel alloc] init];
+        //获取缩略图
+        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(250, 250) contentMode:PHImageContentModeAspectFit options:thumboption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+            
+            UIImage* thumbImage = [UIImage imageWithData:UIImageJPEGRepresentation(result, 1.0)];
+            [photoModel setThumbImage:thumbImage];
+            
+        }];
+        //获取原图
+        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(ScreenWidth, ScreenHeight) contentMode:PHImageContentModeAspectFit options:orioption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+            
+            UIImage* image = [UIImage imageWithData:UIImageJPEGRepresentation(result, 1.0)];
+            [photoModel setPhotoImage:image];
+            
+        }];
+        
+        [selectedImageModels addObject:photoModel];
+    }];
+    
+    //回调
+    if (self.selectHandle) {
+        self.selectHandle(selectedImageModels);
+    }
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

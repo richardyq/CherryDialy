@@ -25,8 +25,7 @@ static const NSInteger kMaxPhotoCount = 8;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     appendImageControls = [NSMutableArray array];
-    _imageList = [NSMutableArray array];
-    _thumbList = [NSMutableArray array];
+    _photoModels = [NSMutableArray array];
     
     AppendPhotoControl* appendControl = [[AppendPhotoControl alloc] init];
     [appendImageControls addObject:appendControl];
@@ -79,7 +78,7 @@ static const NSInteger kMaxPhotoCount = 8;
         return;
     }
     
-    if (controlIndex == (self.imageList.count + 1)) {
+    if (controlIndex == (self.photoModels.count + 1)) {
         //添加新的照片
     }
     else{
@@ -111,9 +110,41 @@ static const NSInteger kMaxPhotoCount = 8;
 }
 
 - (void) showAssetsLibrarySelectViewController{
-    AssetsLibrarySelectViewController* selectViewController = [[AssetsLibrarySelectViewController alloc] initWithLimitCount:kMaxPhotoCount];
-    [self.navigationController pushViewController:selectViewController animated:YES];
+
+    NSInteger count = kMaxPhotoCount - self.photoModels.count;
+    [AssetsLibrarySelectViewController showWithLimitCount:count hanle:^(NSArray<AppendPhotoImageModel *> *models) {
+        [self.photoModels addObjectsFromArray:models];
+        //刷新
+        [self refreshPhotoControls];
+    }];
     
+}
+
+- (void) refreshPhotoControls{
+    if(appendImageControls && appendImageControls.count > 0){
+        [appendImageControls enumerateObjectsUsingBlock:^(AppendPhotoControl * control, NSUInteger idx, BOOL * _Nonnull stop) {
+            [control removeFromSuperview];
+        }];
+        
+        [appendImageControls removeAllObjects];
+    }
+    
+    [self.photoModels enumerateObjectsUsingBlock:^(AppendPhotoImageModel * model, NSUInteger idx, BOOL * _Nonnull stop) {
+        AppendPhotoControl* control = [[AppendPhotoControl alloc] init];
+        [control setThumbImage:model.thumbImage];
+        [self.view addSubview:control];
+        [appendImageControls addObject:control];
+        
+    }];
+    
+    if (self.photoModels.count < kMaxPhotoCount) {
+        AppendPhotoControl* appendControl = [[AppendPhotoControl alloc] init];
+        [appendImageControls addObject:appendControl];
+        [self.view addSubview:appendControl];
+        [appendControl addTarget:self action:@selector(photoControlClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    [self layoutPhotoControls];
 }
 
 

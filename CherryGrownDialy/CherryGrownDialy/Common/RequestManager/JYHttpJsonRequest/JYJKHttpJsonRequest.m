@@ -33,7 +33,7 @@
         if (!weakSelf) {
             return ;
         }
-        [self postFailed:task Error:error];
+        [weakSelf postFailed:task Error:error];
         NSLog(@"%@", [error localizedDescription]);
     }];
 }

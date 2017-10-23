@@ -18,4 +18,10 @@
 
 //日记模块
 + (NSString*) postDialyServiceUrl:(NSString*)method;
+
+//照片模块
++ (NSString*) postPhotoServiceUrl:(NSString*)method;
+
+//上传文件
++ (NSString*) postUploadData:(NSString*) method;
 @end

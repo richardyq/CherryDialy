@@ -22,12 +22,24 @@
     [self.tableView setBackgroundColor:[UIColor whiteColor]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-    [self makeTestPhotoList];
+    //[self makeTestPhotoList];
+    [self startGetResentlyPhotoList];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) startGetResentlyPhotoList{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startGetResentlyPhotoListRequest)];
+    MJRefreshNormalHeader* refHeader = (MJRefreshNormalHeader*)self.tableView.mj_header;
+    refHeader.lastUpdatedTimeLabel.hidden = YES;
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void) startGetResentlyPhotoListRequest{
+    [PhotoMoudleUtil startLoadResentlyPhotos:self resultSelector:@selector(resentlyPhotoListLoaded:) returnSelector:@selector(resentlyPhotoListReturn:)];
 }
 
 - (void) makeTestPhotoList{
@@ -88,5 +100,19 @@
     return 0.5;
 }
 
+#pragma mark - Request CallBack
+- (void) resentlyPhotoListLoaded:(id) result{
+    if (result && [result isKindOfClass:[NSArray class]]) {
+        resentlyPhotos = (NSArray<PhotoInfoModel*>*) result;
+    }
+}
 
+- (void) resentlyPhotoListReturn:(JYJKRequestRetModel*) retModel{
+    [self.tableView.mj_header endRefreshing];
+    if (retModel.errorCode != Error_None) {
+        [self showAlertMessage:retModel.errorMessage];
+        return;
+    }
+    [self.tableView reloadData];
+}
 @end

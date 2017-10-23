@@ -15,6 +15,8 @@
 		27423EDD1F99A36C00F08597 /* AppendPhotoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423EDC1F99A36C00F08597 /* AppendPhotoControl.m */; };
 		27423EE01F99CE6300F08597 /* AssetsLibrarySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423EDF1F99CE6300F08597 /* AssetsLibrarySelectViewController.m */; };
 		27423EE31F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423EE21F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.m */; };
+		274FA59D1F9A38CE0006B389 /* JYJKHttpUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 274FA59C1F9A38CE0006B389 /* JYJKHttpUploadRequest.m */; };
+		274FA5A01F9A42EF0006B389 /* AppendPhotoImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 274FA59F1F9A42EF0006B389 /* AppendPhotoImageModel.m */; };
 		27547DAC1F89F40C0033288C /* DialyViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DAB1F89F40C0033288C /* DialyViewControllerManager.m */; };
 		27547DAF1F89F41E0033288C /* DialyMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DAE1F89F41E0033288C /* DialyMoudleUtil.m */; };
 		27547DB21F89F4580033288C /* CDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DB11F89F4580033288C /* CDBaseViewController.m */; };
@@ -84,6 +86,8 @@
 		27DA38181F8C6D6600E7E13A /* DialyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38171F8C6D6600E7E13A /* DialyModel.m */; };
 		27DA381B1F8C6F1800E7E13A /* DialyInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA381A1F8C6F1800E7E13A /* DialyInfoTableViewCell.m */; };
 		27DA38211F8CBE1300E7E13A /* DialyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */; };
+		27DBB4F61F9C2E1C0083287B /* AppendPhotoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */; };
+		27DBB4F91F9C89160083287B /* ResentlyPhotosRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */; };
 		D45AA902CA3FD8E7E14F3BD6 /* libPods-CherryGrownDialy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,10 @@
 		27423EDF1F99CE6300F08597 /* AssetsLibrarySelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsLibrarySelectViewController.m; sourceTree = "<group>"; };
 		27423EE11F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetsLibraryCollectionViewCell.h; sourceTree = "<group>"; };
 		27423EE21F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsLibraryCollectionViewCell.m; sourceTree = "<group>"; };
+		274FA59B1F9A38CE0006B389 /* JYJKHttpUploadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYJKHttpUploadRequest.h; sourceTree = "<group>"; };
+		274FA59C1F9A38CE0006B389 /* JYJKHttpUploadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYJKHttpUploadRequest.m; sourceTree = "<group>"; };
+		274FA59E1F9A42EF0006B389 /* AppendPhotoImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppendPhotoImageModel.h; sourceTree = "<group>"; };
+		274FA59F1F9A42EF0006B389 /* AppendPhotoImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendPhotoImageModel.m; sourceTree = "<group>"; };
 		27547DAA1F89F40C0033288C /* DialyViewControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyViewControllerManager.h; sourceTree = "<group>"; };
 		27547DAB1F89F40C0033288C /* DialyViewControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyViewControllerManager.m; sourceTree = "<group>"; };
 		27547DAD1F89F41E0033288C /* DialyMoudleUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyMoudleUtil.h; sourceTree = "<group>"; };
@@ -244,6 +252,10 @@
 		27DA381A1F8C6F1800E7E13A /* DialyInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyInfoTableViewCell.m; sourceTree = "<group>"; };
 		27DA381F1F8CBE1300E7E13A /* DialyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyDetailViewController.h; sourceTree = "<group>"; };
 		27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialyDetailViewController.m; sourceTree = "<group>"; };
+		27DBB4F41F9C2E1C0083287B /* AppendPhotoRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppendPhotoRequest.h; sourceTree = "<group>"; };
+		27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendPhotoRequest.m; sourceTree = "<group>"; };
+		27DBB4F71F9C89160083287B /* ResentlyPhotosRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResentlyPhotosRequest.h; sourceTree = "<group>"; };
+		27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResentlyPhotosRequest.m; sourceTree = "<group>"; };
 		40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CherryGrownDialy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACDF9D250B7B20ECEC6448 /* Pods-CherryGrownDialy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.debug.xcconfig"; sourceTree = "<group>"; };
 		890AFF13A534D817E03DAC7C /* Pods-CherryGrownDialy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.release.xcconfig"; sourceTree = "<group>"; };
@@ -490,6 +502,8 @@
 				279E318E1F88ACA8004C3531 /* JYJKHttpJsonRequest.m */,
 				279E318F1F88ACA8004C3531 /* JYJKHttpRequest.h */,
 				279E31901F88ACA8004C3531 /* JYJKHttpRequest.m */,
+				274FA59B1F9A38CE0006B389 /* JYJKHttpUploadRequest.h */,
+				274FA59C1F9A38CE0006B389 /* JYJKHttpUploadRequest.m */,
 			);
 			path = JYHttpJsonRequest;
 			sourceTree = "<group>";
@@ -557,6 +571,7 @@
 		27A53FF31F8F38CE005E4164 /* PhotoMoudle */ = {
 			isa = PBXGroup;
 			children = (
+				27DBB4F31F9C2E080083287B /* Reqest */,
 				27A53FF41F8F38CE005E4164 /* DataModel */,
 				27A53FF51F8F38CE005E4164 /* ViewController */,
 				27A53FF91F8F396B005E4164 /* PhotoMoudleUtil.h */,
@@ -572,6 +587,8 @@
 			children = (
 				27A53FF61F8F38E5005E4164 /* PhotoInfoModel.h */,
 				27A53FF71F8F38E5005E4164 /* PhotoInfoModel.m */,
+				274FA59E1F9A42EF0006B389 /* AppendPhotoImageModel.h */,
+				274FA59F1F9A42EF0006B389 /* AppendPhotoImageModel.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -631,6 +648,17 @@
 				27D1F4191F9206C2007DE94B /* DialyModelList.m */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		27DBB4F31F9C2E080083287B /* Reqest */ = {
+			isa = PBXGroup;
+			children = (
+				27DBB4F41F9C2E1C0083287B /* AppendPhotoRequest.h */,
+				27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */,
+				27DBB4F71F9C89160083287B /* ResentlyPhotosRequest.h */,
+				27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */,
+			);
+			path = Reqest;
 			sourceTree = "<group>";
 		};
 		95DC748C6D8262D5AFA8F39E /* Frameworks */ = {
@@ -786,6 +814,7 @@
 				27423EE31F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.m in Sources */,
 				27547DBC1F89FAA60033288C /* CategorySelectViewController.m in Sources */,
 				279C94CD1F874A180061C8EE /* AppDelegate.m in Sources */,
+				274FA5A01F9A42EF0006B389 /* AppendPhotoImageModel.m in Sources */,
 				2723F6091F8B46BD0036B919 /* NSString+SizeExtension.m in Sources */,
 				279C95161F8772860061C8EE /* UserLoginViewController.m in Sources */,
 				27547DB91F89F7100033288C /* CategorySelectedControl.m in Sources */,
@@ -806,6 +835,7 @@
 				27D1F4171F920327007DE94B /* ResentDialyListRequest.m in Sources */,
 				27D1F41A1F9206C2007DE94B /* DialyModelList.m in Sources */,
 				279E319D1F88ACB9004C3531 /* JYJKHttpJsonRequest.m in Sources */,
+				27DBB4F61F9C2E1C0083287B /* AppendPhotoRequest.m in Sources */,
 				27DA38141F8C6A9700E7E13A /* RecentDialyListTableViewController.m in Sources */,
 				279E319A1F88ACAF004C3531 /* JYJKRequestManager.m in Sources */,
 				2723F6061F8B26140036B919 /* SelectTagsView.m in Sources */,
@@ -831,9 +861,11 @@
 				27A540081F8F6145005E4164 /* PhotoDetailViewController.m in Sources */,
 				279E31C71F88D5AD004C3531 /* DialyStartViewController.m in Sources */,
 				27547DAF1F89F41E0033288C /* DialyMoudleUtil.m in Sources */,
+				274FA59D1F9A38CE0006B389 /* JYJKHttpUploadRequest.m in Sources */,
 				279C94F31F874F3C0061C8EE /* ViewControllerManager.m in Sources */,
 				27D1F41D1F92077F007DE94B /* GetDialyListRequest.m in Sources */,
 				279E319B1F88ACB1004C3531 /* JYJKRequestObservice.m in Sources */,
+				27DBB4F91F9C89160083287B /* ResentlyPhotosRequest.m in Sources */,
 				279E31A41F88B179004C3531 /* HttpUrlHelper.m in Sources */,
 				279E31991F88ACAD004C3531 /* JYJKRequest.m in Sources */,
 				27DA38211F8CBE1300E7E13A /* DialyDetailViewController.m in Sources */,

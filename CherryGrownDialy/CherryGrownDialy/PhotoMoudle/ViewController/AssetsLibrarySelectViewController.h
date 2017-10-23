@@ -7,8 +7,14 @@
 //
 
 #import "CDBaseViewController.h"
+#import "AppendPhotoImageModel.h"
+
+typedef void(^SelectUploadPhotosHandle)(NSArray<AppendPhotoImageModel*> * models);
 
 @interface AssetsLibrarySelectViewController : CDBaseViewController
+
++ (void) showWithLimitCount:(NSInteger) limitCount
+                      hanle:(SelectUploadPhotosHandle) handle;
 
 - (id) initWithLimitCount:(NSInteger) limitCount;
 @end

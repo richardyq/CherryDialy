@@ -17,6 +17,12 @@
     
 }
 
++ (NSString*) uploadPostPath
+{
+    return [NSString stringWithFormat:@"%@/ImageUpload?service=", kBasePostHost];
+    
+}
+
 //用户模块
 + (NSString*) postUserServiceUrl:(NSString*)method
 {
@@ -35,6 +41,18 @@
 
 + (NSString*) postDialyServiceUrl:(NSString*)method{
     NSString* sBaseUrl = [[self basePostPath] stringByAppendingString:@"dialyService"];
+    NSString* sUrl = [sBaseUrl stringByAppendingFormat:@"&method=%@", method];
+    return sUrl;
+}
+
++ (NSString*) postPhotoServiceUrl:(NSString*)method{
+    NSString* sBaseUrl = [[self basePostPath] stringByAppendingString:@"photoService"];
+    NSString* sUrl = [sBaseUrl stringByAppendingFormat:@"&method=%@", method];
+    return sUrl;
+}
+
++ (NSString*) postUploadData:(NSString*) method{
+    NSString* sBaseUrl = [[self uploadPostPath] stringByAppendingString:@"ImageService"];
     NSString* sUrl = [sBaseUrl stringByAppendingFormat:@"&method=%@", method];
     return sUrl;
 }

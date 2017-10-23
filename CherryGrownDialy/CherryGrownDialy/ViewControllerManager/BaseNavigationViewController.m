@@ -8,9 +8,7 @@
 
 #import "BaseNavigationViewController.h"
 
-@interface UIBarButtonItem (BackExtension)
 
-@end
 
 @implementation UIBarButtonItem (BackExtension)
 

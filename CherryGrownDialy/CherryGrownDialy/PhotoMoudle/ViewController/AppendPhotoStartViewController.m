@@ -113,6 +113,8 @@
         
         _submitButton.layer.cornerRadius = 5;
         _submitButton.layer.masksToBounds = YES;
+        
+        [_submitButton addTarget:self action:@selector(appendButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _submitButton;
 }
@@ -159,7 +161,48 @@
     }];
 }
 
+- (void) appendButtonClicked:(id) sender
+{
+    NSArray<AppendPhotoImageModel*>* photos = self.photosViewController.photoModels;
+    if (!photos || photos.count == 0) {
+        [self showAlertMessage:@"请选择照片"];
+        return;
+    }
+    
+    [photos enumerateObjectsUsingBlock:^(AppendPhotoImageModel * photoModel, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIImage* photoImage = photoModel.photoImage;
+        NSData* imageData = UIImageJPEGRepresentation(photoImage, 1);
+        
+        NSMutableDictionary* params = [NSMutableDictionary dictionary];
+        [params setValue:@"imageService" forKey:@"service"];
+        [params setValue:@"uploadPhoto" forKey:@"method"];
+        if (self.categoryModel)
+        {
+            [params setValue:[NSString stringWithFormat:@"%ld", self.categoryModel.id] forKey:@"cateId"];
+        }
+        
+        if (self.selectedTagModels && self.selectedTagModels.count > 0)
+        {
+            __block NSString* tags = nil;
+            [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (!tags || tags.length == 0) {
+                    tags = [NSString stringWithFormat:@"%ld", tagModel.id];
+                }
+                else
+                {
+                    tags = [tags stringByAppendingFormat:@",%ld", tagModel.id];
+                }
+                
+            }];
+            if (tags && tags.length > 0) {
+                [params setValue:tags forKey:tags];
+            }
+        }
+        
+        [PhotoMoudleUtil startUploadPhoto:params imageData:imageData observiceObject:self resultSelector:nil returnSelector:nil];
+    }];
+}
 
-
+#pragma mark - request callback
 
 @end

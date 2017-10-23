@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppendPhotoImageModel.h"
 
 @interface AppendPhotoListViewController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray* imageList;
-@property (nonatomic, strong) NSMutableArray* thumbList;
+@property (nonatomic, strong) NSMutableArray<AppendPhotoImageModel*>* photoModels;
+
+//@property (nonatomic, strong) NSMutableArray* imageList;
+//@property (nonatomic, strong) NSMutableArray* thumbList;
 
 @end
