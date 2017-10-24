@@ -22,4 +22,9 @@
 + (void) startLoadResentlyPhotos:(id) object
                   resultSelector:(SEL) resultSelector
                   returnSelector:(SEL) returnSelector;
+
+
++ (UIImage*) thumbImageFormImage:(UIImage*) image;
+
++ (UIImage*) screenFitedImageFormImage:(UIImage*) image;
 @end

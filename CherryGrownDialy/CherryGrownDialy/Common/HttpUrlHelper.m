@@ -7,13 +7,26 @@
 //
 
 #import "HttpUrlHelper.h"
-//#define kBasePostHost    @"http://192.168.3.2:8080"
+
+
+//static NSString* kBasePostHost = @"http://192.168.3.2:8080/ServletDemo";
+
+
+#ifdef Network_Release
+//阿里云服务器地址
+#define kBasePostHost   @"http://47.95.238.82:8080"
+#define kBasePostPath   @"CommonServiceInterface/base.do"
+#else
+//测试本机接口
 #define kBasePostHost    @"http://192.168.3.2:8080/ServletDemo"
+#define kBasePostPath   @"CommonServiceInterface"
+#endif
+
 @implementation HttpUrlHelper
 
 + (NSString*) basePostPath
 {
-    return [NSString stringWithFormat:@"%@/CommonServiceInterface?service=", kBasePostHost];
+    return [NSString stringWithFormat:@"%@/%@?service=", kBasePostHost, kBasePostPath];
     
 }
 

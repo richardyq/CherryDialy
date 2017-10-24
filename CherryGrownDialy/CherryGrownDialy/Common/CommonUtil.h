@@ -16,6 +16,7 @@
 #import "SegmentTab.h"
 #import "UIView+SizeExtension.h"
 #import "UIImage+Shape.h"
+#import "UIImage+SizeExtension.h"
 #import "NSObject+WaitingHUB.h"
 #import "NSString+SizeExtension.h"
 #import "NSObject+Compare.h"

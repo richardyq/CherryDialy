@@ -31,7 +31,7 @@ PhotoControlSelectDelegate>
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"照片";
-    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self layoutElements];
     
     [self makeTestPhotoData];

@@ -32,5 +32,43 @@
     [[JYJKRequestManager defaultManager] createRequest:request observice:observiceModel];
 }
 
++ (UIImage*) thumbImageFormImage:(UIImage*) image
+{
+    UIImage* thumbImage = nil;
+    
+    CGFloat thumbWidth = image.size.width;
+    CGFloat thumbHeight = image.size.height;
+    
+    CGFloat maxLength = thumbWidth;
+    CGFloat imageScale = thumbHeight / 320.0;
+    if (thumbWidth > thumbHeight) {
+        maxLength = thumbHeight;
+        CGRect rect = CGRectMake((thumbWidth - thumbHeight)/2, 0, maxLength, maxLength);
+        thumbImage = [image getSubImage:rect];
+    }
+    else
+    {
+        
+        imageScale = thumbWidth / 320;
+        CGRect rect = CGRectMake(0, (thumbHeight - thumbWidth)/2, maxLength, maxLength);
+        thumbImage = [image getSubImage:rect];
+    }
+    if (imageScale < 1.0) {
+        [thumbImage scaleImageToScale:imageScale];
+    }
+    
+    return thumbImage;
+}
 
++ (UIImage*) screenFitedImageFormImage:(UIImage*) image
+{
+    UIImage* fitedImage = image;
+    
+    CGFloat imageScale = ScreenWidth * [UIScreen mainScreen].scale / image.size.width;
+    if (imageScale < 1.0) {
+        fitedImage = [image scaleImageToScale:imageScale];
+    }
+    
+    return fitedImage;
+}
 @end

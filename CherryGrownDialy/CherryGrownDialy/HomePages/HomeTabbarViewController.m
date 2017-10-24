@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.tabBar setBackgroundImage:[UIImage rectImage:CGSizeMake(ScreenWidth, 49) Color:[UIColor mainThemeColor]]];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.tabBar setTintColor:[UIColor whiteColor]];
     if (@available(iOS 10.0, *)) {
         [self.tabBar setUnselectedItemTintColor:[UIColor commonLightGrayTextColor]];

@@ -227,10 +227,11 @@
     cell.backgroundColor = [UIColor whiteColor];
     PHAsset *asset = [assets objectAtIndex:indexPath.row];
     
-    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(250, 250) contentMode:PHImageContentModeAspectFit options:option resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(500, 500) contentMode:PHImageContentModeAspectFit options:option resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         
         UIImage* image = [UIImage imageWithData:UIImageJPEGRepresentation(result, 1.0)];
-        [cell setThumbImage:image];
+        
+        [cell setThumbImage:[PhotoMoudleUtil thumbImageFormImage:image]];
         
     }];
     
@@ -311,9 +312,10 @@
     [self.selectedArray enumerateObjectsUsingBlock:^(PHAsset * asset, NSUInteger idx, BOOL * _Nonnull stop) {
         AppendPhotoImageModel* photoModel = [[AppendPhotoImageModel alloc] init];
         //获取缩略图
-        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(250, 250) contentMode:PHImageContentModeAspectFit options:thumboption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(500, 500) contentMode:PHImageContentModeAspectFit options:thumboption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             
             UIImage* thumbImage = [UIImage imageWithData:UIImageJPEGRepresentation(result, 1.0)];
+            thumbImage = [PhotoMoudleUtil thumbImageFormImage:thumbImage];
             [photoModel setThumbImage:thumbImage];
             
         }];
@@ -321,7 +323,9 @@
         [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(ScreenWidth, ScreenHeight) contentMode:PHImageContentModeAspectFit options:orioption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             
             UIImage* image = [UIImage imageWithData:UIImageJPEGRepresentation(result, 1.0)];
-            [photoModel setPhotoImage:image];
+            
+            [photoModel setPhotoImage:[PhotoMoudleUtil screenFitedImageFormImage:image]];
+            NSLog(@"photoModel imageSize (%.2f, %.2f)", image.size.width, image.size.height);
             
         }];
         
@@ -335,5 +339,6 @@
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 @end

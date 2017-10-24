@@ -26,6 +26,94 @@
 		27547DBF1F8A075E0033288C /* UIView+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DBD1F8A075E0033288C /* UIView+SizeExtension.m */; };
 		27547DC21F8A098F0033288C /* TagSelectedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DC11F8A098F0033288C /* TagSelectedControl.m */; };
 		27547DC61F8A0E190033288C /* AppendDialyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DC51F8A0E190033288C /* AppendDialyRequest.m */; };
+		27658A561F9F0F15005B204C /* UIView+Boarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C951B1F8775B20061C8EE /* UIView+Boarder.m */; };
+		27658A571F9F0F15005B204C /* AssetsLibrarySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423EDF1F99CE6300F08597 /* AssetsLibrarySelectViewController.m */; };
+		27658A581F9F0F15005B204C /* UserAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C950C1F8758F50061C8EE /* UserAccountModel.m */; };
+		27658A591F9F0F15005B204C /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31B21F88C3DA004C3531 /* TagModel.m */; };
+		27658A5A1F9F0F15005B204C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94DA1F874A180061C8EE /* main.m */; };
+		27658A5B1F9F0F15005B204C /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38051F8C687900E7E13A /* SegmentViewController.m */; };
+		27658A5C1F9F0F15005B204C /* DialyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38171F8C6D6600E7E13A /* DialyModel.m */; };
+		27658A5D1F9F0F15005B204C /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31C01F88D4B8004C3531 /* BaseNavigationViewController.m */; };
+		27658A5E1F9F0F15005B204C /* AppendPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423ED91F999EC100F08597 /* AppendPhotoListViewController.m */; };
+		27658A5F1F9F0F15005B204C /* TagSelectedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DC11F8A098F0033288C /* TagSelectedControl.m */; };
+		27658A601F9F0F15005B204C /* DialyInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DB41F89F4C60033288C /* DialyInputViewController.m */; };
+		27658A611F9F0F15005B204C /* PhotoImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A5400A1F8F6A05005E4164 /* PhotoImageViewController.m */; };
+		27658A621F9F0F15005B204C /* AssetsLibraryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423EE21F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.m */; };
+		27658A631F9F0F15005B204C /* CategorySelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DBB1F89FAA60033288C /* CategorySelectViewController.m */; };
+		27658A641F9F0F15005B204C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94CC1F874A180061C8EE /* AppDelegate.m */; };
+		27658A651F9F0F15005B204C /* AppendPhotoImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 274FA59F1F9A42EF0006B389 /* AppendPhotoImageModel.m */; };
+		27658A661F9F0F15005B204C /* NSString+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723F6081F8B46BD0036B919 /* NSString+SizeExtension.m */; };
+		27658A671F9F0F15005B204C /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C95151F8772860061C8EE /* UserLoginViewController.m */; };
+		27658A681F9F0F15005B204C /* CategorySelectedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DB81F89F7100033288C /* CategorySelectedControl.m */; };
+		27658A691F9F0F15005B204C /* NetworkStatusUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94FB1F87522B0061C8EE /* NetworkStatusUtil.m */; };
+		27658A6A1F9F0F15005B204C /* CommonDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94F81F8751E10061C8EE /* CommonDataHelper.m */; };
+		27658A6B1F9F0F15005B204C /* AppendPhotoStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423ED61F9994B300F08597 /* AppendPhotoStartViewController.m */; };
+		27658A6C1F9F0F15005B204C /* UIImage+Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C951F1F877FF20061C8EE /* UIImage+Shape.m */; };
+		27658A6D1F9F0F15005B204C /* DialyInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA381A1F8C6F1800E7E13A /* DialyInfoTableViewCell.m */; };
+		27658A6E1F9F0F15005B204C /* GetDialyDetailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F41F1F92F429007DE94B /* GetDialyDetailRequest.m */; };
+		27658A6F1F9F0F15005B204C /* AppendPhotoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27423EDC1F99A36C00F08597 /* AppendPhotoControl.m */; };
+		27658A701F9F0F15005B204C /* MainStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31C31F88D59A004C3531 /* MainStartViewController.m */; };
+		27658A711F9F0F15005B204C /* HomeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31BD1F88D497004C3531 /* HomeTabbarViewController.m */; };
+		27658A721F9F0F15005B204C /* UIColor+Standand.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C95181F8774CA0061C8EE /* UIColor+Standand.m */; };
+		27658A731F9F0F15005B204C /* PhotoViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540001F8F39CA005E4164 /* PhotoViewControllerManager.m */; };
+		27658A741F9F0F15005B204C /* JYJKHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31901F88ACA8004C3531 /* JYJKHttpRequest.m */; };
+		27658A751F9F0F15005B204C /* PhotoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A53FF71F8F38E5005E4164 /* PhotoInfoModel.m */; };
+		27658A761F9F0F15005B204C /* UIView+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DBD1F8A075E0033288C /* UIView+SizeExtension.m */; };
+		27658A771F9F0F15005B204C /* ResentDialyListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F4161F920327007DE94B /* ResentDialyListRequest.m */; };
+		27658A781F9F0F15005B204C /* DialyModelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F4191F9206C2007DE94B /* DialyModelList.m */; };
+		27658A791F9F0F15005B204C /* JYJKHttpJsonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E318E1F88ACA8004C3531 /* JYJKHttpJsonRequest.m */; };
+		27658A7A1F9F0F15005B204C /* AppendPhotoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */; };
+		27658A7B1F9F0F15005B204C /* RecentDialyListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38131F8C6A9700E7E13A /* RecentDialyListTableViewController.m */; };
+		27658A7C1F9F0F15005B204C /* JYJKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31941F88ACA8004C3531 /* JYJKRequestManager.m */; };
+		27658A7D1F9F0F15005B204C /* SelectTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723F6051F8B26140036B919 /* SelectTagsView.m */; };
+		27658A7E1F9F0F15005B204C /* ResentlyPhotoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A53FFD1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m */; };
+		27658A7F1F9F0F15005B204C /* SegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38001F8C687900E7E13A /* SegmentBar.m */; };
+		27658A801F9F0F15005B204C /* UIViewController+Segment.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA380B1F8C687900E7E13A /* UIViewController+Segment.m */; };
+		27658A811F9F0F15005B204C /* DialyViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DAB1F89F40C0033288C /* DialyViewControllerManager.m */; };
+		27658A821F9F0F15005B204C /* SegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38021F8C687900E7E13A /* SegmentCell.m */; };
+		27658A831F9F0F15005B204C /* JYJKRequestRetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31981F88ACA8004C3531 /* JYJKRequestRetModel.m */; };
+		27658A841F9F0F15005B204C /* CategoryMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31AF1F88C3C4004C3531 /* CategoryMoudleUtil.m */; };
+		27658A851F9F0F15005B204C /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31AC1F88C36C004C3531 /* CategoryModel.m */; };
+		27658A861F9F0F15005B204C /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94EF1F874E760061C8EE /* CommonUtil.m */; };
+		27658A871F9F0F15005B204C /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C950E1F8758F50061C8EE /* UserInfoModel.m */; };
+		27658A881F9F0F15005B204C /* UIColor+Segment.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38071F8C687900E7E13A /* UIColor+Segment.m */; };
+		27658A891F9F0F15005B204C /* UserMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C95101F8759040061C8EE /* UserMoudleUtil.m */; };
+		27658A8A1F9F0F15005B204C /* CategoryListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31B61F88C49F004C3531 /* CategoryListRequest.m */; };
+		27658A8B1F9F0F15005B204C /* UIView+Segment_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38091F8C687900E7E13A /* UIView+Segment_Size.m */; };
+		27658A8C1F9F0F15005B204C /* UserLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31A71F88B25E004C3531 /* UserLoginRequest.m */; };
+		27658A8D1F9F0F15005B204C /* NSObject+WaitingHUB.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C95211F8782D90061C8EE /* NSObject+WaitingHUB.m */; };
+		27658A8E1F9F0F15005B204C /* CDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DB11F89F4580033288C /* CDBaseViewController.m */; };
+		27658A8F1F9F0F15005B204C /* TagListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31B91F88C606004C3531 /* TagListResult.m */; };
+		27658A901F9F0F15005B204C /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94EB1F874CBD0061C8EE /* WelcomeViewController.m */; };
+		27658A911F9F0F15005B204C /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540071F8F6145005E4164 /* PhotoDetailViewController.m */; };
+		27658A921F9F0F15005B204C /* DialyStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31C61F88D5AD004C3531 /* DialyStartViewController.m */; };
+		27658A931F9F0F15005B204C /* DialyMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DAE1F89F41E0033288C /* DialyMoudleUtil.m */; };
+		27658A941F9F0F15005B204C /* JYJKHttpUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 274FA59C1F9A38CE0006B389 /* JYJKHttpUploadRequest.m */; };
+		27658A951F9F0F15005B204C /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94F21F874F3C0061C8EE /* ViewControllerManager.m */; };
+		27658A961F9F0F15005B204C /* GetDialyListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F41C1F92077F007DE94B /* GetDialyListRequest.m */; };
+		27658A971F9F0F15005B204C /* JYJKRequestObservice.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31961F88ACA8004C3531 /* JYJKRequestObservice.m */; };
+		27658A981F9F0F15005B204C /* ResentlyPhotosRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */; };
+		27658A991F9F0F15005B204C /* HttpUrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31A31F88B179004C3531 /* HttpUrlHelper.m */; };
+		27658A9A1F9F0F15005B204C /* JYJKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31921F88ACA8004C3531 /* JYJKRequest.m */; };
+		27658A9B1F9F0F15005B204C /* DialyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */; };
+		27658A9C1F9F0F15005B204C /* AlbumStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31CC1F88D602004C3531 /* AlbumStartViewController.m */; };
+		27658A9D1F9F0F15005B204C /* PhotoStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E31C91F88D5BB004C3531 /* PhotoStartViewController.m */; };
+		27658A9E1F9F0F15005B204C /* InitializeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94F51F8751630061C8EE /* InitializeUtil.m */; };
+		27658A9F1F9F0F15005B204C /* TagsSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723F5FF1F8B18260036B919 /* TagsSelectViewController.m */; };
+		27658AA01F9F0F15005B204C /* PhotoMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A53FFA1F8F396B005E4164 /* PhotoMoudleUtil.m */; };
+		27658AA11F9F0F15005B204C /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540031F8F41C2005E4164 /* PhotoTableViewCell.m */; };
+		27658AA21F9F0F15005B204C /* AppendDialyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27547DC51F8A0E190033288C /* AppendDialyRequest.m */; };
+		27658AA31F9F0F15005B204C /* NSObject+AlertExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C95021F87542F0061C8EE /* NSObject+AlertExtension.m */; };
+		27658AA41F9F0F15005B204C /* NSObject+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 279E319F1F88AD9B004C3531 /* NSObject+Compare.m */; };
+		27658AA61F9F0F15005B204C /* libPods-CherryGrownDialy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */; };
+		27658AA81F9F0F15005B204C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279C94D61F874A180061C8EE /* LaunchScreen.storyboard */; };
+		27658AA91F9F0F15005B204C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279C94D41F874A180061C8EE /* Assets.xcassets */; };
+		27658AB51F9F102E005B204C /* Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27658AB31F9F102D005B204C /* Info-Release.plist */; };
+		27658AB61F9F102E005B204C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27658AB41F9F102D005B204C /* Info.plist */; };
+		27658AB71F9F1196005B204C /* Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27658AB31F9F102D005B204C /* Info-Release.plist */; };
+		27658AB81F9F1243005B204C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27658AB41F9F102D005B204C /* Info.plist */; };
+		27658ABB1F9F1A1A005B204C /* UIImage+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */; };
+		27658ABC1F9F1DBB005B204C /* UIImage+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */; };
 		279C94CD1F874A180061C8EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94CC1F874A180061C8EE /* AppDelegate.m */; };
 		279C94D51F874A180061C8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279C94D41F874A180061C8EE /* Assets.xcassets */; };
 		279C94D81F874A180061C8EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279C94D61F874A180061C8EE /* LaunchScreen.storyboard */; };
@@ -92,6 +180,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DA3ECBF37A0830998B840F0 /* libPods-CherryGrownDialy_Release.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CherryGrownDialy_Release.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2723F5FE1F8B18260036B919 /* TagsSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagsSelectViewController.h; sourceTree = "<group>"; };
 		2723F5FF1F8B18260036B919 /* TagsSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagsSelectViewController.m; sourceTree = "<group>"; };
 		2723F6041F8B26140036B919 /* SelectTagsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectTagsView.h; sourceTree = "<group>"; };
@@ -130,12 +219,16 @@
 		27547DC11F8A098F0033288C /* TagSelectedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagSelectedControl.m; sourceTree = "<group>"; };
 		27547DC41F8A0E190033288C /* AppendDialyRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppendDialyRequest.h; sourceTree = "<group>"; };
 		27547DC51F8A0E190033288C /* AppendDialyRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendDialyRequest.m; sourceTree = "<group>"; };
+		27658AAF1F9F0F15005B204C /* CherryGrownDialy_Release.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CherryGrownDialy_Release.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27658AB31F9F102D005B204C /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
+		27658AB41F9F102D005B204C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SizeExtension.m"; sourceTree = "<group>"; };
+		27658ABA1F9F1A1A005B204C /* UIImage+SizeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SizeExtension.h"; sourceTree = "<group>"; };
 		279C94C81F874A180061C8EE /* CherryGrownDialy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CherryGrownDialy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C94CB1F874A180061C8EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		279C94CC1F874A180061C8EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		279C94D41F874A180061C8EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		279C94D71F874A180061C8EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		279C94D91F874A180061C8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279C94DA1F874A180061C8EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		279C94E71F874C240061C8EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		279C94EA1F874CBD0061C8EE /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
@@ -259,9 +352,19 @@
 		40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CherryGrownDialy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACDF9D250B7B20ECEC6448 /* Pods-CherryGrownDialy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.debug.xcconfig"; sourceTree = "<group>"; };
 		890AFF13A534D817E03DAC7C /* Pods-CherryGrownDialy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.release.xcconfig"; sourceTree = "<group>"; };
+		D15EB221A4EC071E5BBD9519 /* Pods-CherryGrownDialy_Release.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy_Release.release.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy_Release/Pods-CherryGrownDialy_Release.release.xcconfig"; sourceTree = "<group>"; };
+		F2B693E5129C4EFC2C9BA717 /* Pods-CherryGrownDialy_Release.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy_Release.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy_Release/Pods-CherryGrownDialy_Release.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27658AA51F9F0F15005B204C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27658AA61F9F0F15005B204C /* libPods-CherryGrownDialy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		279C94C51F874A180061C8EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +437,15 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		27658AB11F9F0FE2005B204C /* AppInfo */ = {
+			isa = PBXGroup;
+			children = (
+				27658AB31F9F102D005B204C /* Info-Release.plist */,
+				27658AB41F9F102D005B204C /* Info.plist */,
+			);
+			path = AppInfo;
+			sourceTree = "<group>";
+		};
 		279C94BF1F874A180061C8EE = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				279C94C81F874A180061C8EE /* CherryGrownDialy.app */,
+				27658AAF1F9F0F15005B204C /* CherryGrownDialy_Release.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,7 +480,6 @@
 				279C94CC1F874A180061C8EE /* AppDelegate.m */,
 				279C94D41F874A180061C8EE /* Assets.xcassets */,
 				279C94D61F874A180061C8EE /* LaunchScreen.storyboard */,
-				279C94D91F874A180061C8EE /* Info.plist */,
 				279C94DA1F874A180061C8EE /* main.m */,
 				279C94E61F874C070061C8EE /* Support */,
 			);
@@ -394,6 +506,7 @@
 		279C94E61F874C070061C8EE /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				27658AB11F9F0FE2005B204C /* AppInfo */,
 				279C94E71F874C240061C8EE /* PrefixHeader.pch */,
 			);
 			path = Support;
@@ -436,6 +549,8 @@
 		279C94FD1F8753F50061C8EE /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				27658ABA1F9F1A1A005B204C /* UIImage+SizeExtension.h */,
+				27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */,
 				27DA37FE1F8C687900E7E13A /* SegmentTab */,
 				2723F6071F8B46BD0036B919 /* NSString+SizeExtension.h */,
 				2723F6081F8B46BD0036B919 /* NSString+SizeExtension.m */,
@@ -665,6 +780,7 @@
 			isa = PBXGroup;
 			children = (
 				40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */,
+				1DA3ECBF37A0830998B840F0 /* libPods-CherryGrownDialy_Release.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -674,6 +790,8 @@
 			children = (
 				65ACDF9D250B7B20ECEC6448 /* Pods-CherryGrownDialy.debug.xcconfig */,
 				890AFF13A534D817E03DAC7C /* Pods-CherryGrownDialy.release.xcconfig */,
+				F2B693E5129C4EFC2C9BA717 /* Pods-CherryGrownDialy_Release.debug.xcconfig */,
+				D15EB221A4EC071E5BBD9519 /* Pods-CherryGrownDialy_Release.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -681,6 +799,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		27658A531F9F0F15005B204C /* CherryGrownDialy_Release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27658AAC1F9F0F15005B204C /* Build configuration list for PBXNativeTarget "CherryGrownDialy_Release" */;
+			buildPhases = (
+				27658A541F9F0F15005B204C /* [CP] Check Pods Manifest.lock */,
+				27658A551F9F0F15005B204C /* Sources */,
+				27658AA51F9F0F15005B204C /* Frameworks */,
+				27658AA71F9F0F15005B204C /* Resources */,
+				27658AAA1F9F0F15005B204C /* [CP] Embed Pods Frameworks */,
+				27658AAB1F9F0F15005B204C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CherryGrownDialy_Release;
+			productName = CherryGrownDialy;
+			productReference = 27658AAF1F9F0F15005B204C /* CherryGrownDialy_Release.app */;
+			productType = "com.apple.product-type.application";
+		};
 		279C94C71F874A180061C8EE /* CherryGrownDialy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279C94DE1F874A180061C8EE /* Build configuration list for PBXNativeTarget "CherryGrownDialy" */;
@@ -710,6 +848,9 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = yinquan;
 				TargetAttributes = {
+					27658A531F9F0F15005B204C = {
+						ProvisioningStyle = Automatic;
+					};
 					279C94C71F874A180061C8EE = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -730,23 +871,82 @@
 			projectRoot = "";
 			targets = (
 				279C94C71F874A180061C8EE /* CherryGrownDialy */,
+				27658A531F9F0F15005B204C /* CherryGrownDialy_Release */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		27658AA71F9F0F15005B204C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27658AB81F9F1243005B204C /* Info.plist in Resources */,
+				27658AB71F9F1196005B204C /* Info-Release.plist in Resources */,
+				27658AA81F9F0F15005B204C /* LaunchScreen.storyboard in Resources */,
+				27658AA91F9F0F15005B204C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		279C94C61F874A180061C8EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27658AB61F9F102E005B204C /* Info.plist in Resources */,
 				279C94D81F874A180061C8EE /* LaunchScreen.storyboard in Resources */,
 				279C94D51F874A180061C8EE /* Assets.xcassets in Resources */,
+				27658AB51F9F102E005B204C /* Info-Release.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27658A541F9F0F15005B204C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		27658AAA1F9F0F15005B204C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27658AAB1F9F0F15005B204C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AECA68D5962A5E47F105FFC8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -795,6 +995,93 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27658A551F9F0F15005B204C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27658A561F9F0F15005B204C /* UIView+Boarder.m in Sources */,
+				27658A571F9F0F15005B204C /* AssetsLibrarySelectViewController.m in Sources */,
+				27658A581F9F0F15005B204C /* UserAccountModel.m in Sources */,
+				27658A591F9F0F15005B204C /* TagModel.m in Sources */,
+				27658A5A1F9F0F15005B204C /* main.m in Sources */,
+				27658A5B1F9F0F15005B204C /* SegmentViewController.m in Sources */,
+				27658A5C1F9F0F15005B204C /* DialyModel.m in Sources */,
+				27658A5D1F9F0F15005B204C /* BaseNavigationViewController.m in Sources */,
+				27658A5E1F9F0F15005B204C /* AppendPhotoListViewController.m in Sources */,
+				27658A5F1F9F0F15005B204C /* TagSelectedControl.m in Sources */,
+				27658A601F9F0F15005B204C /* DialyInputViewController.m in Sources */,
+				27658A611F9F0F15005B204C /* PhotoImageViewController.m in Sources */,
+				27658A621F9F0F15005B204C /* AssetsLibraryCollectionViewCell.m in Sources */,
+				27658A631F9F0F15005B204C /* CategorySelectViewController.m in Sources */,
+				27658A641F9F0F15005B204C /* AppDelegate.m in Sources */,
+				27658A651F9F0F15005B204C /* AppendPhotoImageModel.m in Sources */,
+				27658A661F9F0F15005B204C /* NSString+SizeExtension.m in Sources */,
+				27658A671F9F0F15005B204C /* UserLoginViewController.m in Sources */,
+				27658A681F9F0F15005B204C /* CategorySelectedControl.m in Sources */,
+				27658A691F9F0F15005B204C /* NetworkStatusUtil.m in Sources */,
+				27658A6A1F9F0F15005B204C /* CommonDataHelper.m in Sources */,
+				27658A6B1F9F0F15005B204C /* AppendPhotoStartViewController.m in Sources */,
+				27658A6C1F9F0F15005B204C /* UIImage+Shape.m in Sources */,
+				27658A6D1F9F0F15005B204C /* DialyInfoTableViewCell.m in Sources */,
+				27658A6E1F9F0F15005B204C /* GetDialyDetailRequest.m in Sources */,
+				27658A6F1F9F0F15005B204C /* AppendPhotoControl.m in Sources */,
+				27658A701F9F0F15005B204C /* MainStartViewController.m in Sources */,
+				27658A711F9F0F15005B204C /* HomeTabbarViewController.m in Sources */,
+				27658A721F9F0F15005B204C /* UIColor+Standand.m in Sources */,
+				27658A731F9F0F15005B204C /* PhotoViewControllerManager.m in Sources */,
+				27658A741F9F0F15005B204C /* JYJKHttpRequest.m in Sources */,
+				27658A751F9F0F15005B204C /* PhotoInfoModel.m in Sources */,
+				27658A761F9F0F15005B204C /* UIView+SizeExtension.m in Sources */,
+				27658A771F9F0F15005B204C /* ResentDialyListRequest.m in Sources */,
+				27658A781F9F0F15005B204C /* DialyModelList.m in Sources */,
+				27658A791F9F0F15005B204C /* JYJKHttpJsonRequest.m in Sources */,
+				27658A7A1F9F0F15005B204C /* AppendPhotoRequest.m in Sources */,
+				27658A7B1F9F0F15005B204C /* RecentDialyListTableViewController.m in Sources */,
+				27658A7C1F9F0F15005B204C /* JYJKRequestManager.m in Sources */,
+				27658A7D1F9F0F15005B204C /* SelectTagsView.m in Sources */,
+				27658A7E1F9F0F15005B204C /* ResentlyPhotoListTableViewController.m in Sources */,
+				27658A7F1F9F0F15005B204C /* SegmentBar.m in Sources */,
+				27658A801F9F0F15005B204C /* UIViewController+Segment.m in Sources */,
+				27658A811F9F0F15005B204C /* DialyViewControllerManager.m in Sources */,
+				27658A821F9F0F15005B204C /* SegmentCell.m in Sources */,
+				27658A831F9F0F15005B204C /* JYJKRequestRetModel.m in Sources */,
+				27658A841F9F0F15005B204C /* CategoryMoudleUtil.m in Sources */,
+				27658A851F9F0F15005B204C /* CategoryModel.m in Sources */,
+				27658A861F9F0F15005B204C /* CommonUtil.m in Sources */,
+				27658A871F9F0F15005B204C /* UserInfoModel.m in Sources */,
+				27658A881F9F0F15005B204C /* UIColor+Segment.m in Sources */,
+				27658A891F9F0F15005B204C /* UserMoudleUtil.m in Sources */,
+				27658A8A1F9F0F15005B204C /* CategoryListRequest.m in Sources */,
+				27658A8B1F9F0F15005B204C /* UIView+Segment_Size.m in Sources */,
+				27658ABC1F9F1DBB005B204C /* UIImage+SizeExtension.m in Sources */,
+				27658A8C1F9F0F15005B204C /* UserLoginRequest.m in Sources */,
+				27658A8D1F9F0F15005B204C /* NSObject+WaitingHUB.m in Sources */,
+				27658A8E1F9F0F15005B204C /* CDBaseViewController.m in Sources */,
+				27658A8F1F9F0F15005B204C /* TagListResult.m in Sources */,
+				27658A901F9F0F15005B204C /* WelcomeViewController.m in Sources */,
+				27658A911F9F0F15005B204C /* PhotoDetailViewController.m in Sources */,
+				27658A921F9F0F15005B204C /* DialyStartViewController.m in Sources */,
+				27658A931F9F0F15005B204C /* DialyMoudleUtil.m in Sources */,
+				27658A941F9F0F15005B204C /* JYJKHttpUploadRequest.m in Sources */,
+				27658A951F9F0F15005B204C /* ViewControllerManager.m in Sources */,
+				27658A961F9F0F15005B204C /* GetDialyListRequest.m in Sources */,
+				27658A971F9F0F15005B204C /* JYJKRequestObservice.m in Sources */,
+				27658A981F9F0F15005B204C /* ResentlyPhotosRequest.m in Sources */,
+				27658A991F9F0F15005B204C /* HttpUrlHelper.m in Sources */,
+				27658A9A1F9F0F15005B204C /* JYJKRequest.m in Sources */,
+				27658A9B1F9F0F15005B204C /* DialyDetailViewController.m in Sources */,
+				27658A9C1F9F0F15005B204C /* AlbumStartViewController.m in Sources */,
+				27658A9D1F9F0F15005B204C /* PhotoStartViewController.m in Sources */,
+				27658A9E1F9F0F15005B204C /* InitializeUtil.m in Sources */,
+				27658A9F1F9F0F15005B204C /* TagsSelectViewController.m in Sources */,
+				27658AA01F9F0F15005B204C /* PhotoMoudleUtil.m in Sources */,
+				27658AA11F9F0F15005B204C /* PhotoTableViewCell.m in Sources */,
+				27658AA21F9F0F15005B204C /* AppendDialyRequest.m in Sources */,
+				27658AA31F9F0F15005B204C /* NSObject+AlertExtension.m in Sources */,
+				27658AA41F9F0F15005B204C /* NSObject+Compare.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		279C94C41F874A180061C8EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -853,6 +1140,7 @@
 				279C95111F8759040061C8EE /* UserMoudleUtil.m in Sources */,
 				279E31B71F88C49F004C3531 /* CategoryListRequest.m in Sources */,
 				27DA38101F8C687900E7E13A /* UIView+Segment_Size.m in Sources */,
+				27658ABB1F9F1A1A005B204C /* UIImage+SizeExtension.m in Sources */,
 				279E31A81F88B25E004C3531 /* UserLoginRequest.m in Sources */,
 				279C95231F8782DA0061C8EE /* NSObject+WaitingHUB.m in Sources */,
 				27547DB21F89F4580033288C /* CDBaseViewController.m in Sources */,
@@ -895,6 +1183,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		27658AAD1F9F0F15005B204C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2B693E5129C4EFC2C9BA717 /* Pods-CherryGrownDialy_Release.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HVGQ2T7S8;
+				GCC_PREFIX_HEADER = CherryGrownDialy/Support/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = Network_Release;
+				INFOPLIST_FILE = "$(SRCROOT)/CherryGrownDialy/Support/AppInfo/Info-Release.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyue.CherryGrownDialy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27658AAE1F9F0F15005B204C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15EB221A4EC071E5BBD9519 /* Pods-CherryGrownDialy_Release.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HVGQ2T7S8;
+				GCC_PREFIX_HEADER = CherryGrownDialy/Support/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = Network_Release;
+				INFOPLIST_FILE = "$(SRCROOT)/CherryGrownDialy/Support/AppInfo/Info-Release.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyue.CherryGrownDialy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		279C94DC1F874A180061C8EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1007,7 +1333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HVGQ2T7S8;
 				GCC_PREFIX_HEADER = CherryGrownDialy/Support/PrefixHeader.pch;
-				INFOPLIST_FILE = CherryGrownDialy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CherryGrownDialy/Support/AppInfo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyue.CherryGrownDialy;
@@ -1024,7 +1350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HVGQ2T7S8;
 				GCC_PREFIX_HEADER = CherryGrownDialy/Support/PrefixHeader.pch;
-				INFOPLIST_FILE = CherryGrownDialy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CherryGrownDialy/Support/AppInfo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juyue.CherryGrownDialy;
@@ -1036,6 +1362,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27658AAC1F9F0F15005B204C /* Build configuration list for PBXNativeTarget "CherryGrownDialy_Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27658AAD1F9F0F15005B204C /* Debug */,
+				27658AAE1F9F0F15005B204C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		279C94C31F874A180061C8EE /* Build configuration list for PBXProject "CherryGrownDialy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -18,10 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"最近动态";
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     SegmentViewController* segmentController = [[SegmentViewController alloc] init];
     [self addChildViewController:segmentController];
     [self.view addSubview:segmentController.view];
+    
+    
     
     [segmentController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.right.equalTo(self.view);

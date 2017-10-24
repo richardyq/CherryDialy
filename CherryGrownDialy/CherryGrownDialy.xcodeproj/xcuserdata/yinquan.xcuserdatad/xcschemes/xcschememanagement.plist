@@ -9,6 +9,24 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>CherryGrownDialy_Release.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>27658A531F9F0F15005B204C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>279C94C71F874A180061C8EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

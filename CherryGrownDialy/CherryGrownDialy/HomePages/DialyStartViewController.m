@@ -31,7 +31,7 @@ UITableViewDataSource>
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"日记";
-    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     UIBarButtonItem* appendBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(appendDialyButtonClicked:)];
     [self.navigationItem setRightBarButtonItem:appendBarButton];
     _selectedTagModels = [NSMutableArray array];

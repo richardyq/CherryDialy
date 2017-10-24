@@ -13,6 +13,7 @@
 static const NSInteger kMaxPhotoCount = 8;
 
 @interface AppendPhotoListViewController ()
+<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     NSMutableArray<AppendPhotoControl*>* appendImageControls;
 }
@@ -90,6 +91,15 @@ static const NSInteger kMaxPhotoCount = 8;
                 [self showAlertMessage:@"对不起，您的手机暂时不支持手机拍摄照片。"];
                 return ;
             }
+            UIImagePickerController * imagePickerVC = [[UIImagePickerController alloc] init];
+            // 设置资源来源（
+            imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+            
+            imagePickerVC.mediaTypes = @[(NSString *)kUTTypeImage];
+            // 设置代理，遵守UINavigationControllerDelegate, UIImagePickerControllerDelegate 协议
+            imagePickerVC.delegate = self;
+            
+            [self presentViewController:imagePickerVC animated:YES completion:nil];
         }]];
         [sheetalert addAction:[UIAlertAction actionWithTitle:@"从手机相册获取" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
             if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -145,6 +155,19 @@ static const NSInteger kMaxPhotoCount = 8;
     }
     
     [self layoutPhotoControls];
+}
+
+#pragma mark - UIImagePickerController Delegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo
+{
+    AppendPhotoImageModel* model = [[AppendPhotoImageModel alloc] init];
+    [model setThumbImage:[PhotoMoudleUtil thumbImageFormImage:image]];
+    [model setPhotoImage:[PhotoMoudleUtil screenFitedImageFormImage:image]];
+    [self.photoModels addObject:model];
+    //刷新
+    [self refreshPhotoControls];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 
