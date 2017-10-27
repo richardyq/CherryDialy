@@ -18,9 +18,9 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
-    
+//    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded ;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
+//    [manager.requestSerializer setValue:@"charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     __weak typeof(self) weakSelf = self;
     
     [manager POST:postUrl parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

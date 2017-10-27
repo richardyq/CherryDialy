@@ -27,6 +27,13 @@
     
     [dictList enumerateObjectsUsingBlock:^(NSDictionary * dict, NSUInteger idx, BOOL * _Nonnull stop) {
         PhotoInfoModel* model = [PhotoInfoModel mj_objectWithKeyValues:dict];
+        NSString* imageUrl = model.imageUrl;
+        NSString* thumbUrl = model.thumbUrl;
+        imageUrl = [NSString stringWithFormat:@"%@%@", kBasePostHost, imageUrl];
+        thumbUrl = [NSString stringWithFormat:@"%@%@", kBasePostHost, thumbUrl];
+        [model setImageUrl:imageUrl];
+        [model setThumbUrl:thumbUrl];
+        
         [photoModels addObject:model];
     }];
     

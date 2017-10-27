@@ -22,6 +22,7 @@
 #import "MBProgressHUD.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #import "CommonUtil.h"
 #import "ViewControllerManager.h"

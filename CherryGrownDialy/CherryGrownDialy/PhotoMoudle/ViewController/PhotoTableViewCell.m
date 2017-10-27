@@ -101,8 +101,8 @@
             make.left.equalTo(cellLeft);
             
             if (idx > 0) {
-                PhotoInfoCell* perControl = photoCells[idx - 1];
-                make.width.equalTo(perControl);
+//                PhotoInfoCell* perControl = photoCells[idx - 1];
+                make.width.mas_equalTo(@(ScreenWidth/4));
             }
             
             if (control == photoCells.lastObject) {

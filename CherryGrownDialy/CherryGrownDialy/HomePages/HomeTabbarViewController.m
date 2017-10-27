@@ -51,7 +51,7 @@
     //日记
     DialyStartViewController* dialyStartViewController = [[DialyStartViewController alloc] initWithNibName:nil bundle:nil];
     BaseNavigationViewController* dialyNavigationController = [[BaseNavigationViewController alloc]initWithRootViewController:dialyStartViewController];
-    dialyNavigationController.tabBarItem.title = @"最近";
+    dialyNavigationController.tabBarItem.title = @"日记";
     dialyNavigationController.tabBarItem.image = [UIImage imageNamed:@"tabbar_dialy_m"];
     
     //相册

@@ -10,6 +10,7 @@
 #import "PhotoTableViewCell.h"
 
 @interface ResentlyPhotoListTableViewController ()
+<PhotoControlSelectDelegate>
 {
     NSArray* resentlyPhotos;
 }
@@ -85,7 +86,7 @@
     
     NSArray* photos = [resentlyPhotos subarrayWithRange:subRange];
     [cell setPhotoInfos:photos];
-    
+    [cell setSelectDelegate:self];
     return cell;
 }
 
@@ -114,5 +115,10 @@
         return;
     }
     [self.tableView reloadData];
+}
+
+#pragma mark - PhotoControlSelectDelegate
+- (void) photoControlSelect:(NSInteger) selectIndex{
+    [PhotoViewControllerManager entryPhotoDetailPage:resentlyPhotos currentIndex:selectIndex];
 }
 @end

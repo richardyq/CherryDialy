@@ -42,16 +42,17 @@
             if (error) {
                 return;
             }
-            
+            [weakSelf performSelector:@selector(showImage:) withObject:image afterDelay:0.04];
             //
-            [weakSelf showImage];
+            //[weakSelf showImage:image];
         }];
     }
 }
 
-- (void) showImage{
+- (void) showImage:(UIImage*) thumbImage{
     __weak typeof(self) weakSelf = self;
-    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.photoModel.imageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    NSURL* imageUrl = [NSURL URLWithString:self.photoModel.imageUrl];
+    [self.photoImageView sd_setImageWithURL:imageUrl placeholderImage: thumbImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (!weakSelf) {
             return ;
         }

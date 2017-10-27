@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+#ifdef Network_Release
+//阿里云服务器地址
+#define kBasePostHost   @"http://47.95.238.82:8080"
+#define kBasePostPath   @"CommonServiceInterface/base.do"
+#else
+//测试本机接口
+#define kBasePostHost    @"http://192.168.3.2:8080/ServletDemo"
+#define kBasePostPath   @"CommonServiceInterface"
+#endif
+
+
 @interface HttpUrlHelper : NSObject
 
 //用户模块

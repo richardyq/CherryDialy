@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '960EE2EED2FB1D523A368B0BB698FB91'
-               BlueprintName = 'Pods-CherryGrownDialy'
+               BlueprintIdentifier = 'EE366E1E6962F82E6AEC8AE66FA66CBF'
+               BlueprintName = 'FDFullscreenPopGesture'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-CherryGrownDialy.a'>
+               BuildableName = 'libFDFullscreenPopGesture.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

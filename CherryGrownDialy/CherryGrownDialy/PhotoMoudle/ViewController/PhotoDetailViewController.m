@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSArray<PhotoInfoModel*>* photos;
 @property (nonatomic, assign) NSInteger currentIndex;
 @property (nonatomic, strong) UIPageViewController* pageViewController;
+@property (nonatomic, strong) UIButton* backButton;
 @end
 
 @implementation PhotoDetailViewController
@@ -32,6 +33,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //全屏显示
+    [self setFd_prefersNavigationBarHidden:YES];
+    
     [self layoutElements];
     
     PhotoInfoModel* model = self.photos[self.currentIndex];
@@ -48,6 +52,12 @@
     [self.pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(17);
+        make.top.equalTo(self.view).offset(25);
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+    }];
 }
 
 #pragma mark - settingAndGetting
@@ -61,6 +71,19 @@
         [_pageViewController.view setBackgroundColor:[UIColor blackColor]];
     }
     return _pageViewController;
+}
+
+- (UIButton*) backButton
+{
+    if (!_backButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.view addSubview:_backButton];
+        [_backButton setBackgroundImage:[UIImage rectImage:CGSizeMake(40, 40) Color:[UIColor commonTranslucentColor]] forState:UIControlStateNormal];
+        [_backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        _backButton.layer.cornerRadius = 20;
+        _backButton.layer.masksToBounds = YES;
+    }
+    return _backButton;
 }
 
 #pragma mark - UIPageViewControllerDataSource
