@@ -41,6 +41,8 @@
     PhotoInfoModel* model = self.photos[self.currentIndex];
     PhotoImageViewController* imageViewController = [[PhotoImageViewController alloc] initWithPhotoModel:model];
 	[self.pageViewController setViewControllers:@[imageViewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +61,8 @@
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
 }
+
+
 
 #pragma mark - settingAndGetting
 - (UIPageViewController*) pageViewController{
@@ -82,9 +86,18 @@
         [_backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         _backButton.layer.cornerRadius = 20;
         _backButton.layer.masksToBounds = YES;
+        [_backButton addTarget:self action:@selector(backButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backButton;
 }
+
+#pragma mark - control events
+- (void) backButtonClicked:(id) sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 #pragma mark - UIPageViewControllerDataSource
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
@@ -106,12 +119,12 @@
 {
     PhotoImageViewController* photoViewController = (PhotoImageViewController*) viewController;
     PhotoInfoModel* photoModel = photoViewController.photoModel;
-    NSInteger index = [self.photos indexOfObject:photoModel];
+    NSInteger index = [self.photos indexOfObject:photoModel] + 1;
     if (index >= self.photos.count) {
         return nil;
     }
     
-    PhotoInfoModel* model = self.photos[index + 1];
+    PhotoInfoModel* model = self.photos[index];
     PhotoImageViewController* imageViewController = [[PhotoImageViewController alloc] initWithPhotoModel:model];
     
     return imageViewController;

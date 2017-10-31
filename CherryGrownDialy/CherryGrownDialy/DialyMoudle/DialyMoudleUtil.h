@@ -14,6 +14,8 @@
 
 #import "DialyViewControllerManager.h"
 
+extern NSString * const kDialyAppendNoticationName;
+
 @interface DialyMoudleUtil : NSObject
 
 /*
@@ -55,4 +57,11 @@
              observiceObject:(id) object
               resultSelector:(SEL) resultSelector
               returnSelector:(SEL) returnSelector;
+
+/*
+ postAppendedNotification
+ 日记上传成功后发送广播
+ */
++ (void) postAppendedNotification;
+
 @end

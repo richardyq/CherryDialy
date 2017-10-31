@@ -235,6 +235,9 @@
         
     }];
     
+    //是否已经选择
+    [cell setIsSelected:([self.selectedArray indexOfObject:asset] != NSNotFound)];
+    
     return cell;
 }
 
@@ -291,9 +294,6 @@
     NSMutableArray* selectedImageModels = [NSMutableArray array];
     PHFetchOptions *options = [[PHFetchOptions alloc] init];
     options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
-    
-    
-    
     PHImageRequestOptions* orioption = [[PHImageRequestOptions alloc] init];
     PHImageRequestOptions* thumboption = [[PHImageRequestOptions alloc] init];
     //设置显示模式

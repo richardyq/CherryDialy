@@ -7,10 +7,13 @@
 //
 
 #import "PhotoImageViewController.h"
+#import <Photos/Photos.h>
 
 @interface PhotoImageViewController ()
 
 @property (nonatomic, strong) UIImageView* photoImageView;
+@property (nonatomic, strong) UIImage* photoImage;
+
 @end
 
 @implementation PhotoImageViewController
@@ -47,6 +50,11 @@
             //[weakSelf showImage:image];
         }];
     }
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTableviewCellLongPressed:)];
+//    longPress.delegate = self;
+    longPress.minimumPressDuration = 1.0;
+    [self.view addGestureRecognizer:longPress];
 }
 
 - (void) showImage:(UIImage*) thumbImage{
@@ -59,6 +67,8 @@
         if (error) {
             return;
         }
+        
+        _photoImage = image;
         
         CGFloat imageHeight = ScreenWidth * (image.size.height / image.size.width);
         if (imageHeight < ScreenHeight) {
@@ -96,6 +106,21 @@
     }];
 }
 
+- (void) showSaveMenu{
+    UIAlertController *sheetalert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:  UIAlertControllerStyleActionSheet];
+    __weak typeof(self) weakSelf = self;
+    [sheetalert addAction:[UIAlertAction actionWithTitle:@"保存到相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+        [weakSelf loadImageFinished:self.photoImage];
+    }]];
+    
+    
+    [sheetalert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action){
+        
+    }]];
+    
+    [self presentViewController:sheetalert animated:true completion:nil];
+}
+
 #pragma mark - settingAndGetting
 - (UIImageView*) photoImageView{
     if (!_photoImageView) {
@@ -104,5 +129,33 @@
     }
     return _photoImageView;
 }
+
+#pragma mark control events
+- (void) handleTableviewCellLongPressed:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        //弹出操作菜单
+        if (self.photoImage) {
+            [self showSaveMenu];
+        }
+        
+    }
+}
+
+- (void)loadImageFinished:(UIImage *)image
+{
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        
+        PHAssetChangeRequest *req = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+        
+        
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        
+        NSLog(@"success = %d, error = %@", success, error);
+        
+    }];
+}
+
+
 
 @end

@@ -39,6 +39,9 @@ UITableViewDataSource>
     
 //    [self makeTestDialyData];
     [self startLoadDialyList];
+    
+    //kDialyAppendNoticationName
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dialyAppendedHandle:) name:kDialyAppendNoticationName object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -301,5 +304,9 @@ UITableViewDataSource>
     }
 }
 
-
+#pragma mark - Notification Handle
+- (void) dialyAppendedHandle:(NSNotification*) notify
+{
+    [self startLoadDialyList];
+}
 @end

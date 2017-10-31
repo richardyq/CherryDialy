@@ -12,6 +12,8 @@
 #import "GetDialyListRequest.h"
 #import "GetDialyDetailRequest.h"
 
+NSString * const kDialyAppendNoticationName = @"DialyAppendNoticationName";
+
 @implementation DialyMoudleUtil
 
 + (void) startAppendDialy:(NSString*) content
@@ -58,6 +60,10 @@
     
     JYJKRequestObservice* observiceModel = [[JYJKRequestObservice alloc] initWithObject:object resultSelector:resultSelector returnSelector:returnSelector];
     [[JYJKRequestManager defaultManager] createRequest:request observice:observiceModel];
+}
+
++ (void) postAppendedNotification{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDialyAppendNoticationName object:nil];
 }
 
 

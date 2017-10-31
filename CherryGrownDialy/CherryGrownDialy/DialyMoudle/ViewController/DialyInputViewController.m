@@ -158,6 +158,9 @@
         return;
     }
     
+    //发送广播
+    [DialyMoudleUtil postAppendedNotification];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

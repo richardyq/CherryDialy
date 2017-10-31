@@ -23,6 +23,9 @@
     //[self makeTestDialyData];
     
     [self startGetResentlyDialyList];
+    
+    //kDialyAppendNoticationName
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dialyAppendedHandle:) name:kDialyAppendNoticationName object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,5 +113,11 @@
         return;
     }
     [self.tableView reloadData];
+}
+
+#pragma mark - Notification Handle
+- (void) dialyAppendedHandle:(NSNotification*) notify
+{
+    [self startGetResentlyDialyList];
 }
 @end

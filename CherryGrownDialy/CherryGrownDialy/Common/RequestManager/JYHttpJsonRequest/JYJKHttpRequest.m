@@ -33,10 +33,10 @@
     
     //用户ID
     NSString* userId = [commonDataManager loginedUserId];
-    if (userId > 0)
+    if (userId && userId.length > 0)
     {
-        [commonParamDictionary setValue:[NSString stringWithFormat:@"%ld", (long)userId] forKey:kZJKUserIdKey];
-        [commonParamDictionary setValue:[NSString stringWithFormat:@"%ld", (long)userId] forKey:kZJKOperateUserIdKey];
+        [commonParamDictionary setValue:[NSString stringWithFormat:@"%@", userId] forKey:kZJKUserIdKey];
+        [commonParamDictionary setValue:[NSString stringWithFormat:@"%@", userId] forKey:kZJKOperateUserIdKey];
     }
     
     return commonParamDictionary;

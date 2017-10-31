@@ -23,7 +23,12 @@
 //    [manager.requestSerializer setValue:@"charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     __weak typeof(self) weakSelf = self;
     
-    [manager POST:postUrl parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString* jsonParam = [param mj_JSONString];
+    NSString *base64Encoded = [[jsonParam dataUsingEncoding:NSUTF8StringEncoding]  base64EncodedStringWithOptions:0];
+    NSMutableDictionary* paramdict = [NSMutableDictionary dictionary];
+    [paramdict setValue:base64Encoded forKey:@"param"];
+    
+    [manager POST:postUrl parameters:paramdict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if(!weakSelf)
             return;
         
