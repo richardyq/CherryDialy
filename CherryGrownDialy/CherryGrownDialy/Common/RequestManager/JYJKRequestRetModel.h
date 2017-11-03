@@ -22,3 +22,9 @@ typedef NS_ENUM(NSUInteger, RequestErrorCode) {
 @property (nonatomic, retain) id result;
 
 @end
+
+@interface JYJKRequestProgress : NSObject
+
+@property (nonatomic, assign) NSInteger progress;
+@property (nonatomic, assign) NSInteger totalProgress;
+@end

@@ -15,4 +15,5 @@
 
 - (void) postFailed:(NSURLSessionDataTask *) task Error:(NSError*) error;
 
+- (void) postUploadProgress:(NSInteger) porgress totalProgress:(NSInteger) totalPorgress;
 @end

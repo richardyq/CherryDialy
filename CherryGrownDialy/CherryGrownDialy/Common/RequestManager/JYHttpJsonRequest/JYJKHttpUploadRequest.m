@@ -26,8 +26,18 @@
     if (self) {
         _uploadData = uploadData;
         _reqeustParam = [NSMutableDictionary dictionaryWithDictionary:params];
+        [_reqeustParam setValue:[self stringWithUUID] forKey:@"uploadId"];
     }
     return self;
+}
+
+- (NSString*) stringWithUUID
+{
+    CFUUIDRef    uuidObj = CFUUIDCreate(nil);//create a new UUID
+    //get the string representation of the UUID
+    NSString    *uuidString = (NSString*)CFBridgingRelease(CFUUIDCreateString(nil, uuidObj));
+    CFRelease(uuidObj);
+    return uuidString ;
 }
 
 - (NSString*) postUrl
@@ -94,7 +104,10 @@
          
      } progress:^(NSProgress * _Nonnull uploadProgress) {
          NSLog(@"PostImage progress %lld %lld", uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
-
+         
+         //上传数据进度
+         [weakSelf postUploadProgress:uploadProgress.completedUnitCount totalProgress:uploadProgress.totalUnitCount];
+         
      } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
          NSLog(@"上传成功");
 //         [self jsonPostSuccess:task Response:responseObject];

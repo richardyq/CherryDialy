@@ -9,6 +9,7 @@
 #import "PhotoMoudleUtil.h"
 #import "AppendPhotoRequest.h"
 #import "ResentlyPhotosRequest.h"
+#import "GetPhotoListRequest.h"
 
 @implementation PhotoMoudleUtil
 
@@ -17,9 +18,11 @@
           observiceObject:(id) object
            resultSelector:(SEL) resultSelector
            returnSelector:(SEL) returnSelector
+   uploadProgressSelector:(SEL) uploadProgressSelector
 {
     AppendPhotoRequest* request = [[AppendPhotoRequest alloc] initWithParams:postParams uploadData:imageData];
-    JYJKRequestObservice* observiceModel = [[JYJKRequestObservice alloc] initWithObject:object resultSelector:resultSelector returnSelector:returnSelector];
+    JYJKRequestObservice* observiceModel = [[JYJKRequestObservice alloc] initWithObject:object resultSelector:resultSelector returnSelector:returnSelector uploadProgressSelector:uploadProgressSelector];
+    
     [[JYJKRequestManager defaultManager] createRequest:request observice:observiceModel];
 }
 
@@ -28,6 +31,20 @@
                   returnSelector:(SEL) returnSelector
 {
     ResentlyPhotosRequest* request = [[ResentlyPhotosRequest alloc] init];
+    JYJKRequestObservice* observiceModel = [[JYJKRequestObservice alloc] initWithObject:object resultSelector:resultSelector returnSelector:returnSelector];
+    [[JYJKRequestManager defaultManager] createRequest:request observice:observiceModel];
+}
+
++ (void) startGetPhotoList:(NSInteger) startRow
+                      rows:(NSInteger) rows
+                    cateId:(NSInteger) cateId
+                      tags:(NSString*) tags
+           observiceObject:(id) object
+            resultSelector:(SEL) resultSelector
+            returnSelector:(SEL) returnSelector
+{
+    GetPhotoListRequest* request = [[GetPhotoListRequest alloc] initWithStartRow:startRow rows:rows cateId:cateId tags:tags];
+    
     JYJKRequestObservice* observiceModel = [[JYJKRequestObservice alloc] initWithObject:object resultSelector:resultSelector returnSelector:returnSelector];
     [[JYJKRequestManager defaultManager] createRequest:request observice:observiceModel];
 }

@@ -16,4 +16,7 @@
 //@property (nonatomic, strong) NSMutableArray* imageList;
 //@property (nonatomic, strong) NSMutableArray* thumbList;
 
+- (void) startUplodaPhotos:(CategoryModel*) categoryModel
+                      tags:(NSArray<TagModel*>*) tagModels;
+
 @end

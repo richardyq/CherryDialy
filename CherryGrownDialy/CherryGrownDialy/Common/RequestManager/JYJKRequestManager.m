@@ -157,4 +157,32 @@ static JYJKRequestManager* defaultRequestManager = nil;
     [requestObserviceDictionary removeObjectForKey:requestId];
     
 }
+
+- (void) postUploadProgress:(NSInteger) progress totalPorgress:(NSInteger) totalProgress request:(JYJKRequest*) request{
+    if (!request) {
+        return;
+    }
+    
+    NSString* requestId = request.requestId;
+    if (!requestId || requestId.length == 0) {
+        return;
+    }
+    
+    NSMutableArray* observiceList = [requestObserviceDictionary valueForKey:requestId];
+    if (!observiceList) {
+        return;
+    }
+    
+    JYJKRequestProgress* progressModel = [[JYJKRequestProgress alloc] init];
+    progressModel.progress = progress;
+    progressModel.totalProgress = totalProgress;
+    
+    [observiceList enumerateObjectsUsingBlock:^(JYJKRequestObservice* observice, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (observice.object) {
+            if ([observice.object respondsToSelector:observice.uploadProgressSelector]){
+                [observice.object performSelectorOnMainThread:observice.uploadProgressSelector withObject:progressModel waitUntilDone:YES];
+            }
+        }
+    }];
+}
 @end

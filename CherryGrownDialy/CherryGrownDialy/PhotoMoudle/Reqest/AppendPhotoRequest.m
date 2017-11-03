@@ -14,7 +14,5 @@
 {
     NSString* postUrl = [HttpUrlHelper postUploadData:@"uploadPhoto"];
     return postUrl;
-    
-    
 }
 @end

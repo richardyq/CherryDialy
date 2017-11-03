@@ -11,3 +11,7 @@
 @implementation JYJKRequestRetModel
 
 @end
+
+@implementation JYJKRequestProgress
+
+@end

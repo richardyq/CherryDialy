@@ -130,6 +130,45 @@ static const NSInteger kMaxPhotoCount = 8;
     
 }
 
+- (void) startUplodaPhotos:(CategoryModel*) categoryModel
+                      tags:(NSArray<TagModel*>*) tagModels
+{
+    [self.photoModels enumerateObjectsUsingBlock:^(AppendPhotoImageModel * photoModel, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIImage* photoImage = photoModel.photoImage;
+        NSData* imageData = UIImageJPEGRepresentation(photoImage, 1);
+        NSLog(@"uploadImge ....");
+        NSMutableDictionary* params = [NSMutableDictionary dictionary];
+        [params setValue:@"imageService" forKey:@"service"];
+        [params setValue:@"uploadPhoto" forKey:@"method"];
+        if (categoryModel)
+        {
+            [params setValue:[NSString stringWithFormat:@"%ld", categoryModel.id] forKey:@"cateId"];
+        }
+        
+        if (tagModels && tagModels.count > 0)
+        {
+            __block NSString* tags = nil;
+            [tagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (!tags || tags.length == 0) {
+                    tags = [NSString stringWithFormat:@"%ld", tagModel.id];
+                }
+                else
+                {
+                    tags = [tags stringByAppendingFormat:@",%ld", tagModel.id];
+                }
+                
+            }];
+            if (tags && tags.length > 0) {
+                [params setValue:tags forKey:tags];
+            }
+        }
+        
+        AppendPhotoControl* control = appendImageControls[idx];
+        
+        [PhotoMoudleUtil startUploadPhoto:params imageData:imageData observiceObject:control resultSelector:nil returnSelector:nil uploadProgressSelector:@selector(uploadPhotoProgress:)];
+    }];
+}
+
 - (void) refreshPhotoControls{
     if(appendImageControls && appendImageControls.count > 0){
         [appendImageControls enumerateObjectsUsingBlock:^(AppendPhotoControl * control, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -169,6 +208,7 @@ static const NSInteger kMaxPhotoCount = 8;
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 
 @end

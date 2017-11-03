@@ -15,6 +15,7 @@
 #import "UIView+Boarder.h"
 #import "SegmentTab.h"
 #import "UIView+SizeExtension.h"
+#import "SDProgressView.h"
 #import "UIImage+Shape.h"
 #import "UIImage+SizeExtension.h"
 #import "NSObject+WaitingHUB.h"

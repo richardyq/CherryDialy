@@ -13,7 +13,13 @@
 @property (nonatomic, weak) id object;  //调用者
 @property (nonatomic) SEL resultSelector;   //返回结果
 @property (nonatomic) SEL returnSelector;   //执行完成
+@property (nonatomic) SEL uploadProgressSelector; //上传数据进度
 
 - (id) initWithObject:(id) object resultSelector:(SEL) resultSelector returnSelector:(SEL) returnSelector;
+
+- (id) initWithObject:(id) object
+       resultSelector:(SEL) resultSelector
+       returnSelector:(SEL) returnSelector
+uploadProgressSelector:(SEL) uploadProgressSelector;
 
 @end

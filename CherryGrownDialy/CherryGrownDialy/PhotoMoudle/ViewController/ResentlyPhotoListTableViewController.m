@@ -86,6 +86,7 @@
     
     NSArray* photos = [resentlyPhotos subarrayWithRange:subRange];
     [cell setPhotoInfos:photos];
+    [cell setCellRow:indexPath.row];
     [cell setSelectDelegate:self];
     return cell;
 }

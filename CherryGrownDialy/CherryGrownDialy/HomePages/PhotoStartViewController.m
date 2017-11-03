@@ -23,6 +23,7 @@ PhotoControlSelectDelegate>
 @property (nonatomic, strong) UITableView* photoTableView;
 
 @property (nonatomic, strong) NSMutableArray* photoModels;
+@property (nonatomic, assign) NSInteger totalCount;
 @end
 
 @implementation PhotoStartViewController
@@ -34,11 +35,13 @@ PhotoControlSelectDelegate>
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self layoutElements];
     
-    [self makeTestPhotoData];
+    //[self makeTestPhotoData];
     
     //添加照片按钮
     UIBarButtonItem* appendBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(appendPhotoButtonClicked:)];
     [self.navigationItem setRightBarButtonItem:appendBarButton];
+    
+    [self startLoadPhotoList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +68,58 @@ PhotoControlSelectDelegate>
     }];
 }
 
+- (void) startLoadPhotoList{
+    self.photoTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startLoadPhotoListRequest)];
+    MJRefreshNormalHeader* refHeader = (MJRefreshNormalHeader*)self.photoTableView.mj_header;
+    refHeader.lastUpdatedTimeLabel.hidden = YES;
+    [self.photoTableView.mj_header beginRefreshing];
+}
+
+- (void) startloadMorePhotoList{
+    NSInteger cateId = 0;
+    __block NSString* tags = nil;
+    if(self.categoryModel){
+        cateId = self.categoryModel.id;
+    }
+    if(self.selectedTagModels){
+        [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (!tags || tags.length == 0) {
+                tags = tagModel.name;
+            }
+            else{
+                tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
+            }
+        }];
+    }
+    NSInteger startRows = 0;
+    if (self.photoModels) {
+        startRows = self.photoModels.count;
+    }
+    
+    
+    [PhotoMoudleUtil startGetPhotoList:startRows rows:20 cateId:cateId tags:tags observiceObject:self resultSelector:@selector(morePhotoListLoaded:) returnSelector:@selector(photoListReturn:)];
+}
+
+- (void) startLoadPhotoListRequest{
+    NSInteger cateId = 0;
+    __block NSString* tags = nil;
+    if(self.categoryModel){
+        cateId = self.categoryModel.id;
+    }
+    if(self.selectedTagModels){
+        [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (!tags || tags.length == 0) {
+                tags = [NSString stringWithFormat:@"%ld", (long)tagModel.id];
+            }
+            else{
+                tags = [tags stringByAppendingFormat:@",%ld", (long)tagModel.id];
+            }
+        }];
+    }
+    
+    [PhotoMoudleUtil startGetPhotoList:0 rows:20 cateId:cateId tags:tags observiceObject:self resultSelector:@selector(photoListLoaded:) returnSelector:@selector(photoListReturn:)];
+}
+
 - (void) makeTestPhotoData{
     NSMutableArray* models = [NSMutableArray array];
     for (NSInteger index = 0; index < 35; ++index)
@@ -86,6 +141,7 @@ PhotoControlSelectDelegate>
         _categoryModel = model;
         
         //TODO:refresh tableview
+        [self startLoadPhotoList];
     }];
 }
 
@@ -108,6 +164,7 @@ PhotoControlSelectDelegate>
         [weakSelf.tagControl setSelectTagModels:weakSelf.selectedTagModels];
         
         //TODO:refresh tableview
+        [self startLoadPhotoList];
     }];
 }
 
@@ -199,8 +256,60 @@ PhotoControlSelectDelegate>
     return _photoTableView;
 }
 
+- (void) resetTableFooter
+{
+    if (self.photoModels.count < self.totalCount)
+    {
+        [self.photoTableView.mj_footer endRefreshing];
+        self.photoTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(startloadMorePhotoList)];
+    }
+    else
+    {
+        [self.photoTableView.mj_footer endRefreshingWithNoMoreData];
+    }
+}
+
 #pragma mark - PhotoControlSelectDelegate
 - (void) photoControlSelect:(NSInteger) selectIndex{
     [PhotoViewControllerManager entryPhotoDetailPage:self.photoModels currentIndex:selectIndex];
+}
+
+#pragma mark - Request CallBack
+- (void) photoListLoaded:(id) result{
+    if (result && [result isKindOfClass:[PhotoModelList class]]) {
+        PhotoModelList* photoModelList = (PhotoModelList*) result;
+        
+        _totalCount = photoModelList.totalCount;
+        if (self.photoModels) {
+            [self.photoModels removeAllObjects];
+        }
+        self.photoModels = [NSMutableArray arrayWithArray:photoModelList.list];
+    }
+}
+
+- (void) morePhotoListLoaded:(id) result{
+    if (result && [result isKindOfClass:[PhotoModelList class]]) {
+        PhotoModelList* photoModelList = (PhotoModelList*) result;
+        _totalCount = photoModelList.totalCount;
+        if (self.photoModels) {
+            [self.photoModels addObjectsFromArray:photoModelList.list];
+            
+        }
+        else{
+            self.photoModels = [NSMutableArray arrayWithArray:photoModelList.list];
+        }
+        
+    }
+}
+
+- (void) photoListReturn:(JYJKRequestRetModel*) retModel{
+    [self.photoTableView.mj_header endRefreshing];
+    if (retModel.errorCode != Error_None) {
+        [self showAlertMessage:retModel.errorMessage];
+        return;
+    }
+    [self.photoTableView reloadData];
+    
+    [self resetTableFooter];
 }
 @end

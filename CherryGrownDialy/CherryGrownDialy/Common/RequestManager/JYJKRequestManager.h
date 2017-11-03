@@ -19,4 +19,6 @@
 - (void) postRequestResult:(id) result request:(JYJKRequest*) request;
 
 - (void) postRequestReturn:(NSInteger) errorCode errMessage:(NSString*) errorMessage request:(JYJKRequest*) request;
+
+- (void) postUploadProgress:(NSInteger) progress totalPorgress:(NSInteger) totalProgress request:(JYJKRequest*) request;
 @end

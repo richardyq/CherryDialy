@@ -30,4 +30,19 @@
     return self;
 }
 
+- (id) initWithObject:(id) object
+       resultSelector:(SEL) resultSelector
+       returnSelector:(SEL) returnSelector
+uploadProgressSelector:(SEL) uploadProgressSelector
+{
+    self = [super init];
+    if (self) {
+        _object = object;
+        _resultSelector = resultSelector;
+        _returnSelector = returnSelector;
+        _uploadProgressSelector = uploadProgressSelector;
+    }
+    return self;
+}
+
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PhotoInfoModel.h"
+#import "PhotoModelList.h"
 
 #import "PhotoViewControllerManager.h"
 
@@ -17,12 +18,23 @@
                 imageData:(NSData*) imageData
           observiceObject:(id) object
            resultSelector:(SEL) resultSelector
-           returnSelector:(SEL) returnSelector;
+           returnSelector:(SEL) returnSelector
+   uploadProgressSelector:(SEL) uploadProgressSelector;
 
 + (void) startLoadResentlyPhotos:(id) object
                   resultSelector:(SEL) resultSelector
                   returnSelector:(SEL) returnSelector;
 
+/*
+ 获取照片列表
+ */
++ (void) startGetPhotoList:(NSInteger) startRow
+                      rows:(NSInteger) rows
+                    cateId:(NSInteger) cateId
+                      tags:(NSString*) tags
+           observiceObject:(id) object
+            resultSelector:(SEL) resultSelector
+            returnSelector:(SEL) returnSelector;
 
 + (UIImage*) thumbImageFormImage:(UIImage*) image;
 

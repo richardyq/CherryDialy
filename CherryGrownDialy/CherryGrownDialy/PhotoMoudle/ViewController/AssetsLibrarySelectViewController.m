@@ -225,7 +225,7 @@
     AssetsLibraryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([AssetsLibraryCollectionViewCell class]) forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
-    PHAsset *asset = [assets objectAtIndex:indexPath.row];
+    PHAsset *asset = [assets objectAtIndex:assets.count - indexPath.row - 1];
     
     [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(500, 500) contentMode:PHImageContentModeAspectFit options:option resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         
@@ -243,7 +243,7 @@
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    PHAsset *asset = [assets objectAtIndex:indexPath.row];
+    PHAsset *asset = [assets objectAtIndex:assets.count - indexPath.row - 1];
     NSInteger index = [self.selectedArray indexOfObject:asset];
     BOOL selected = NO;
     if (index == NSNotFound) {

@@ -13,4 +13,5 @@
 
 @property (nonatomic, strong) UIImage* thumbImage;
 
+- (void) uploadPhotoProgress:(JYJKRequestProgress*) progressModel ;
 @end

@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UIImageView* appendImageView;
 @property (nonatomic, strong) UIImageView* thumbImageView;
+@property (nonatomic, strong) SDBaseProgressView* progressView;
+
 
 @end
 
@@ -59,6 +61,17 @@
     return _thumbImageView;
 }
 
+- (SDBaseProgressView*) progressView{
+    if (!_progressView) {
+        _progressView = [[SDTransparentPieProgressView alloc] init];
+        [self addSubview:_progressView];
+        [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+    }
+    return _progressView;
+}
+
 - (void) setThumbImage:(UIImage *)thumbImage{
     [self.thumbImageView setImage:thumbImage];
     
@@ -66,4 +79,12 @@
     [self.thumbImageView setHidden:NO];
 }
 
+
+
+#pragma mark - request callback
+- (void) uploadPhotoProgress:(JYJKRequestProgress*) progressModel{
+    NSLog(@"AppendPhotoListViewController - uploadPhotoProgress progress: %ld, totalProgress: %ld", (long)progressModel.progress, (long)progressModel.totalProgress);
+    CGFloat progress = (float)progressModel.progress / progressModel.totalProgress;
+    [self.progressView setProgress:progress];
+}
 @end

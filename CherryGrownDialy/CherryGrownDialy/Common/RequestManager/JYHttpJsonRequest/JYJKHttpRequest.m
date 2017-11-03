@@ -96,6 +96,10 @@
     [self unlock];
 }
 
+- (void) postUploadProgress:(NSInteger) porgress totalProgress:(NSInteger) totalPorgress{
+    [[JYJKRequestManager defaultManager] postUploadProgress:porgress totalPorgress:totalPorgress request:self];
+}
+
 - (void) parserResponeData:(NSData*) responseObject
 {
     

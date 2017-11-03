@@ -114,6 +114,10 @@
 		27658AB81F9F1243005B204C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27658AB41F9F102D005B204C /* Info.plist */; };
 		27658ABB1F9F1A1A005B204C /* UIImage+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */; };
 		27658ABC1F9F1DBB005B204C /* UIImage+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */; };
+		27837A701FA96ABA0024A79B /* GetPhotoListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */; };
+		27837A711FA96ABA0024A79B /* GetPhotoListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */; };
+		27837A741FA96D020024A79B /* PhotoModelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A731FA96D020024A79B /* PhotoModelList.m */; };
+		27837A751FA96D020024A79B /* PhotoModelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A731FA96D020024A79B /* PhotoModelList.m */; };
 		279C94CD1F874A180061C8EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 279C94CC1F874A180061C8EE /* AppDelegate.m */; };
 		279C94D51F874A180061C8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279C94D41F874A180061C8EE /* Assets.xcassets */; };
 		279C94D81F874A180061C8EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279C94D61F874A180061C8EE /* LaunchScreen.storyboard */; };
@@ -176,6 +180,20 @@
 		27DA38211F8CBE1300E7E13A /* DialyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DA38201F8CBE1300E7E13A /* DialyDetailViewController.m */; };
 		27DBB4F61F9C2E1C0083287B /* AppendPhotoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */; };
 		27DBB4F91F9C89160083287B /* ResentlyPhotosRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */; };
+		27F6F1AE1FA85809003E6616 /* SDBallProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A01FA85809003E6616 /* SDBallProgressView.m */; };
+		27F6F1AF1FA85809003E6616 /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A21FA85809003E6616 /* SDBaseProgressView.m */; };
+		27F6F1B01FA85809003E6616 /* SDLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A41FA85809003E6616 /* SDLoopProgressView.m */; };
+		27F6F1B11FA85809003E6616 /* SDPieLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A61FA85809003E6616 /* SDPieLoopProgressView.m */; };
+		27F6F1B21FA85809003E6616 /* SDPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A81FA85809003E6616 /* SDPieProgressView.m */; };
+		27F6F1B31FA85809003E6616 /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1AB1FA85809003E6616 /* SDRotationLoopProgressView.m */; };
+		27F6F1B41FA85809003E6616 /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1AD1FA85809003E6616 /* SDTransparentPieProgressView.m */; };
+		27F6F1B51FA85989003E6616 /* SDBallProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A01FA85809003E6616 /* SDBallProgressView.m */; };
+		27F6F1B61FA8598B003E6616 /* SDBaseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A21FA85809003E6616 /* SDBaseProgressView.m */; };
+		27F6F1B71FA8598D003E6616 /* SDLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A41FA85809003E6616 /* SDLoopProgressView.m */; };
+		27F6F1B81FA8598F003E6616 /* SDPieLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A61FA85809003E6616 /* SDPieLoopProgressView.m */; };
+		27F6F1B91FA85991003E6616 /* SDPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1A81FA85809003E6616 /* SDPieProgressView.m */; };
+		27F6F1BA1FA85995003E6616 /* SDRotationLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1AB1FA85809003E6616 /* SDRotationLoopProgressView.m */; };
+		27F6F1BB1FA85997003E6616 /* SDTransparentPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F6F1AD1FA85809003E6616 /* SDTransparentPieProgressView.m */; };
 		D45AA902CA3FD8E7E14F3BD6 /* libPods-CherryGrownDialy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */; };
 		DDF0EA5E5F19EEC303DB2BC0 /* libPods-CherryGrownDialy_Release.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA3ECBF37A0830998B840F0 /* libPods-CherryGrownDialy_Release.a */; };
 /* End PBXBuildFile section */
@@ -225,6 +243,10 @@
 		27658AB41F9F102D005B204C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SizeExtension.m"; sourceTree = "<group>"; };
 		27658ABA1F9F1A1A005B204C /* UIImage+SizeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SizeExtension.h"; sourceTree = "<group>"; };
+		27837A6E1FA96ABA0024A79B /* GetPhotoListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetPhotoListRequest.h; sourceTree = "<group>"; };
+		27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetPhotoListRequest.m; sourceTree = "<group>"; };
+		27837A721FA96D020024A79B /* PhotoModelList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoModelList.h; sourceTree = "<group>"; };
+		27837A731FA96D020024A79B /* PhotoModelList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoModelList.m; sourceTree = "<group>"; };
 		279C94C81F874A180061C8EE /* CherryGrownDialy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CherryGrownDialy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C94CB1F874A180061C8EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		279C94CC1F874A180061C8EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -350,6 +372,21 @@
 		27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendPhotoRequest.m; sourceTree = "<group>"; };
 		27DBB4F71F9C89160083287B /* ResentlyPhotosRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResentlyPhotosRequest.h; sourceTree = "<group>"; };
 		27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResentlyPhotosRequest.m; sourceTree = "<group>"; };
+		27F6F19F1FA85809003E6616 /* SDBallProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBallProgressView.h; sourceTree = "<group>"; };
+		27F6F1A01FA85809003E6616 /* SDBallProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBallProgressView.m; sourceTree = "<group>"; };
+		27F6F1A11FA85809003E6616 /* SDBaseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseProgressView.h; sourceTree = "<group>"; };
+		27F6F1A21FA85809003E6616 /* SDBaseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseProgressView.m; sourceTree = "<group>"; };
+		27F6F1A31FA85809003E6616 /* SDLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoopProgressView.h; sourceTree = "<group>"; };
+		27F6F1A41FA85809003E6616 /* SDLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLoopProgressView.m; sourceTree = "<group>"; };
+		27F6F1A51FA85809003E6616 /* SDPieLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieLoopProgressView.h; sourceTree = "<group>"; };
+		27F6F1A61FA85809003E6616 /* SDPieLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieLoopProgressView.m; sourceTree = "<group>"; };
+		27F6F1A71FA85809003E6616 /* SDPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPieProgressView.h; sourceTree = "<group>"; };
+		27F6F1A81FA85809003E6616 /* SDPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPieProgressView.m; sourceTree = "<group>"; };
+		27F6F1A91FA85809003E6616 /* SDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDProgressView.h; sourceTree = "<group>"; };
+		27F6F1AA1FA85809003E6616 /* SDRotationLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRotationLoopProgressView.h; sourceTree = "<group>"; };
+		27F6F1AB1FA85809003E6616 /* SDRotationLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRotationLoopProgressView.m; sourceTree = "<group>"; };
+		27F6F1AC1FA85809003E6616 /* SDTransparentPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTransparentPieProgressView.h; sourceTree = "<group>"; };
+		27F6F1AD1FA85809003E6616 /* SDTransparentPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTransparentPieProgressView.m; sourceTree = "<group>"; };
 		40BE3584D2E3F66684E0BAE4 /* libPods-CherryGrownDialy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CherryGrownDialy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACDF9D250B7B20ECEC6448 /* Pods-CherryGrownDialy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.debug.xcconfig"; sourceTree = "<group>"; };
 		890AFF13A534D817E03DAC7C /* Pods-CherryGrownDialy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CherryGrownDialy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CherryGrownDialy/Pods-CherryGrownDialy.release.xcconfig"; sourceTree = "<group>"; };
@@ -491,6 +528,7 @@
 		279C94E11F874A6C0061C8EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				27F6F19E1FA85809003E6616 /* SDProgressView */,
 				279E318B1F88ACA8004C3531 /* RequestManager */,
 				279C94FD1F8753F50061C8EE /* Category */,
 				279C94EE1F874E760061C8EE /* CommonUtil.h */,
@@ -706,6 +744,8 @@
 				27A53FF71F8F38E5005E4164 /* PhotoInfoModel.m */,
 				274FA59E1F9A42EF0006B389 /* AppendPhotoImageModel.h */,
 				274FA59F1F9A42EF0006B389 /* AppendPhotoImageModel.m */,
+				27837A721FA96D020024A79B /* PhotoModelList.h */,
+				27837A731FA96D020024A79B /* PhotoModelList.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -774,8 +814,32 @@
 				27DBB4F51F9C2E1C0083287B /* AppendPhotoRequest.m */,
 				27DBB4F71F9C89160083287B /* ResentlyPhotosRequest.h */,
 				27DBB4F81F9C89160083287B /* ResentlyPhotosRequest.m */,
+				27837A6E1FA96ABA0024A79B /* GetPhotoListRequest.h */,
+				27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */,
 			);
 			path = Reqest;
+			sourceTree = "<group>";
+		};
+		27F6F19E1FA85809003E6616 /* SDProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				27F6F19F1FA85809003E6616 /* SDBallProgressView.h */,
+				27F6F1A01FA85809003E6616 /* SDBallProgressView.m */,
+				27F6F1A11FA85809003E6616 /* SDBaseProgressView.h */,
+				27F6F1A21FA85809003E6616 /* SDBaseProgressView.m */,
+				27F6F1A31FA85809003E6616 /* SDLoopProgressView.h */,
+				27F6F1A41FA85809003E6616 /* SDLoopProgressView.m */,
+				27F6F1A51FA85809003E6616 /* SDPieLoopProgressView.h */,
+				27F6F1A61FA85809003E6616 /* SDPieLoopProgressView.m */,
+				27F6F1A71FA85809003E6616 /* SDPieProgressView.h */,
+				27F6F1A81FA85809003E6616 /* SDPieProgressView.m */,
+				27F6F1A91FA85809003E6616 /* SDProgressView.h */,
+				27F6F1AA1FA85809003E6616 /* SDRotationLoopProgressView.h */,
+				27F6F1AB1FA85809003E6616 /* SDRotationLoopProgressView.m */,
+				27F6F1AC1FA85809003E6616 /* SDTransparentPieProgressView.h */,
+				27F6F1AD1FA85809003E6616 /* SDTransparentPieProgressView.m */,
+			);
+			path = SDProgressView;
 			sourceTree = "<group>";
 		};
 		95DC748C6D8262D5AFA8F39E /* Frameworks */ = {
@@ -916,7 +980,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		27658AAA1F9F0F15005B204C /* [CP] Embed Pods Frameworks */ = {
@@ -976,7 +1040,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D2B2004EB4AF44D9BA6BA17F /* [CP] Embed Pods Frameworks */ = {
@@ -1013,6 +1077,7 @@
 				27658A5F1F9F0F15005B204C /* TagSelectedControl.m in Sources */,
 				27658A601F9F0F15005B204C /* DialyInputViewController.m in Sources */,
 				27658A611F9F0F15005B204C /* PhotoImageViewController.m in Sources */,
+				27F6F1BA1FA85995003E6616 /* SDRotationLoopProgressView.m in Sources */,
 				27658A621F9F0F15005B204C /* AssetsLibraryCollectionViewCell.m in Sources */,
 				27658A631F9F0F15005B204C /* CategorySelectViewController.m in Sources */,
 				27658A641F9F0F15005B204C /* AppDelegate.m in Sources */,
@@ -1023,6 +1088,7 @@
 				27658A691F9F0F15005B204C /* NetworkStatusUtil.m in Sources */,
 				27658A6A1F9F0F15005B204C /* CommonDataHelper.m in Sources */,
 				27658A6B1F9F0F15005B204C /* AppendPhotoStartViewController.m in Sources */,
+				27837A711FA96ABA0024A79B /* GetPhotoListRequest.m in Sources */,
 				27658A6C1F9F0F15005B204C /* UIImage+Shape.m in Sources */,
 				27658A6D1F9F0F15005B204C /* DialyInfoTableViewCell.m in Sources */,
 				27658A6E1F9F0F15005B204C /* GetDialyDetailRequest.m in Sources */,
@@ -1030,14 +1096,17 @@
 				27658A701F9F0F15005B204C /* MainStartViewController.m in Sources */,
 				27658A711F9F0F15005B204C /* HomeTabbarViewController.m in Sources */,
 				27658A721F9F0F15005B204C /* UIColor+Standand.m in Sources */,
+				27F6F1B51FA85989003E6616 /* SDBallProgressView.m in Sources */,
 				27658A731F9F0F15005B204C /* PhotoViewControllerManager.m in Sources */,
 				27658A741F9F0F15005B204C /* JYJKHttpRequest.m in Sources */,
 				27658A751F9F0F15005B204C /* PhotoInfoModel.m in Sources */,
 				27658A761F9F0F15005B204C /* UIView+SizeExtension.m in Sources */,
+				27F6F1B71FA8598D003E6616 /* SDLoopProgressView.m in Sources */,
 				27658A771F9F0F15005B204C /* ResentDialyListRequest.m in Sources */,
 				27658A781F9F0F15005B204C /* DialyModelList.m in Sources */,
 				27658A791F9F0F15005B204C /* JYJKHttpJsonRequest.m in Sources */,
 				27658A7A1F9F0F15005B204C /* AppendPhotoRequest.m in Sources */,
+				27F6F1BB1FA85997003E6616 /* SDTransparentPieProgressView.m in Sources */,
 				27658A7B1F9F0F15005B204C /* RecentDialyListTableViewController.m in Sources */,
 				27658A7C1F9F0F15005B204C /* JYJKRequestManager.m in Sources */,
 				27658A7D1F9F0F15005B204C /* SelectTagsView.m in Sources */,
@@ -1048,9 +1117,11 @@
 				27658A821F9F0F15005B204C /* SegmentCell.m in Sources */,
 				27658A831F9F0F15005B204C /* JYJKRequestRetModel.m in Sources */,
 				27658A841F9F0F15005B204C /* CategoryMoudleUtil.m in Sources */,
+				27F6F1B91FA85991003E6616 /* SDPieProgressView.m in Sources */,
 				27658A851F9F0F15005B204C /* CategoryModel.m in Sources */,
 				27658A861F9F0F15005B204C /* CommonUtil.m in Sources */,
 				27658A871F9F0F15005B204C /* UserInfoModel.m in Sources */,
+				27837A751FA96D020024A79B /* PhotoModelList.m in Sources */,
 				27658A881F9F0F15005B204C /* UIColor+Segment.m in Sources */,
 				27658A891F9F0F15005B204C /* UserMoudleUtil.m in Sources */,
 				27658A8A1F9F0F15005B204C /* CategoryListRequest.m in Sources */,
@@ -1076,9 +1147,11 @@
 				27658A9D1F9F0F15005B204C /* PhotoStartViewController.m in Sources */,
 				27658A9E1F9F0F15005B204C /* InitializeUtil.m in Sources */,
 				27658A9F1F9F0F15005B204C /* TagsSelectViewController.m in Sources */,
+				27F6F1B81FA8598F003E6616 /* SDPieLoopProgressView.m in Sources */,
 				27658AA01F9F0F15005B204C /* PhotoMoudleUtil.m in Sources */,
 				27658AA11F9F0F15005B204C /* PhotoTableViewCell.m in Sources */,
 				27658AA21F9F0F15005B204C /* AppendDialyRequest.m in Sources */,
+				27F6F1B61FA8598B003E6616 /* SDBaseProgressView.m in Sources */,
 				27658AA31F9F0F15005B204C /* NSObject+AlertExtension.m in Sources */,
 				27658AA41F9F0F15005B204C /* NSObject+Compare.m in Sources */,
 			);
@@ -1100,6 +1173,7 @@
 				27547DC21F8A098F0033288C /* TagSelectedControl.m in Sources */,
 				27547DB51F89F4C60033288C /* DialyInputViewController.m in Sources */,
 				27A5400B1F8F6A05005E4164 /* PhotoImageViewController.m in Sources */,
+				27F6F1B31FA85809003E6616 /* SDRotationLoopProgressView.m in Sources */,
 				27423EE31F99DE7F00F08597 /* AssetsLibraryCollectionViewCell.m in Sources */,
 				27547DBC1F89FAA60033288C /* CategorySelectViewController.m in Sources */,
 				279C94CD1F874A180061C8EE /* AppDelegate.m in Sources */,
@@ -1110,6 +1184,7 @@
 				279C94FC1F87522B0061C8EE /* NetworkStatusUtil.m in Sources */,
 				279C94F91F8751E10061C8EE /* CommonDataHelper.m in Sources */,
 				27423ED71F9994B400F08597 /* AppendPhotoStartViewController.m in Sources */,
+				27837A701FA96ABA0024A79B /* GetPhotoListRequest.m in Sources */,
 				279C95201F877FF20061C8EE /* UIImage+Shape.m in Sources */,
 				27DA381B1F8C6F1800E7E13A /* DialyInfoTableViewCell.m in Sources */,
 				27D1F4201F92F429007DE94B /* GetDialyDetailRequest.m in Sources */,
@@ -1117,14 +1192,17 @@
 				279E31C41F88D59A004C3531 /* MainStartViewController.m in Sources */,
 				279E31BE1F88D497004C3531 /* HomeTabbarViewController.m in Sources */,
 				279C95191F8774CA0061C8EE /* UIColor+Standand.m in Sources */,
+				27F6F1AE1FA85809003E6616 /* SDBallProgressView.m in Sources */,
 				27A540011F8F39CA005E4164 /* PhotoViewControllerManager.m in Sources */,
 				279E319E1F88ACBD004C3531 /* JYJKHttpRequest.m in Sources */,
 				27A53FF81F8F38E5005E4164 /* PhotoInfoModel.m in Sources */,
 				27547DBF1F8A075E0033288C /* UIView+SizeExtension.m in Sources */,
+				27F6F1B01FA85809003E6616 /* SDLoopProgressView.m in Sources */,
 				27D1F4171F920327007DE94B /* ResentDialyListRequest.m in Sources */,
 				27D1F41A1F9206C2007DE94B /* DialyModelList.m in Sources */,
 				279E319D1F88ACB9004C3531 /* JYJKHttpJsonRequest.m in Sources */,
 				27DBB4F61F9C2E1C0083287B /* AppendPhotoRequest.m in Sources */,
+				27F6F1B41FA85809003E6616 /* SDTransparentPieProgressView.m in Sources */,
 				27DA38141F8C6A9700E7E13A /* RecentDialyListTableViewController.m in Sources */,
 				279E319A1F88ACAF004C3531 /* JYJKRequestManager.m in Sources */,
 				2723F6061F8B26140036B919 /* SelectTagsView.m in Sources */,
@@ -1135,9 +1213,11 @@
 				27DA380D1F8C687900E7E13A /* SegmentCell.m in Sources */,
 				279E319C1F88ACB4004C3531 /* JYJKRequestRetModel.m in Sources */,
 				279E31B01F88C3C4004C3531 /* CategoryMoudleUtil.m in Sources */,
+				27F6F1B21FA85809003E6616 /* SDPieProgressView.m in Sources */,
 				279E31AD1F88C36C004C3531 /* CategoryModel.m in Sources */,
 				279C94F01F874E760061C8EE /* CommonUtil.m in Sources */,
 				279C95131F875B680061C8EE /* UserInfoModel.m in Sources */,
+				27837A741FA96D020024A79B /* PhotoModelList.m in Sources */,
 				27DA380F1F8C687900E7E13A /* UIColor+Segment.m in Sources */,
 				279C95111F8759040061C8EE /* UserMoudleUtil.m in Sources */,
 				279E31B71F88C49F004C3531 /* CategoryListRequest.m in Sources */,
@@ -1163,9 +1243,11 @@
 				279E31CA1F88D5BB004C3531 /* PhotoStartViewController.m in Sources */,
 				279C94F61F8751630061C8EE /* InitializeUtil.m in Sources */,
 				2723F6001F8B18260036B919 /* TagsSelectViewController.m in Sources */,
+				27F6F1B11FA85809003E6616 /* SDPieLoopProgressView.m in Sources */,
 				27A53FFB1F8F396B005E4164 /* PhotoMoudleUtil.m in Sources */,
 				27A540041F8F41C2005E4164 /* PhotoTableViewCell.m in Sources */,
 				27547DC61F8A0E190033288C /* AppendDialyRequest.m in Sources */,
+				27F6F1AF1FA85809003E6616 /* SDBaseProgressView.m in Sources */,
 				279C951D1F8775EE0061C8EE /* NSObject+AlertExtension.m in Sources */,
 				279E31A11F88AD9B004C3531 /* NSObject+Compare.m in Sources */,
 			);
