@@ -32,4 +32,6 @@
 #import "CategoryMoudleUtil.h"
 #import "DialyMoudleUtil.h"
 #import "PhotoMoudleUtil.h"
+#import "AlbumMoudleUtil.h"
+
 #endif /* PrefixHeader_pch */

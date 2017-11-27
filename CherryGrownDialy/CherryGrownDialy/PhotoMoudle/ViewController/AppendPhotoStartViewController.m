@@ -146,6 +146,9 @@
         if (!weakSelf) {
             return ;
         }
+        if (!weakSelf.selectedTagModels) {
+            _selectedTagModels = [NSMutableArray array];
+        }
         NSInteger index = [self.selectedTagModels indexOfObject:tagModel];
         if (index == NSNotFound) {
             [weakSelf.selectedTagModels addObject:tagModel];

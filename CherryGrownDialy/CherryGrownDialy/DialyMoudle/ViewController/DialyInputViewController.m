@@ -54,7 +54,20 @@
         cateId = self.categoryModel.id;
     }
     
-    NSString* tags = nil;
+    __block NSString* tags = nil;
+    if (self.selectedTagModels) {
+        
+        [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (!tags) {
+                tags = tagModel.name;
+            }
+            else
+            {
+                tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
+            }
+                
+        }];
+    }
     
     [self showWaitingHub:@"正在提交日记数据。。。"];
     [DialyMoudleUtil startAppendDialy:content cateId:cateId tags:tags observiceObject:self resultSelector:nil returnSelector:@selector(appendDialyReturn:)];

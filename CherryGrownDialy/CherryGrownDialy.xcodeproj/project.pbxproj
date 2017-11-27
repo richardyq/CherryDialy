@@ -114,6 +114,14 @@
 		27658AB81F9F1243005B204C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27658AB41F9F102D005B204C /* Info.plist */; };
 		27658ABB1F9F1A1A005B204C /* UIImage+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */; };
 		27658ABC1F9F1DBB005B204C /* UIImage+SizeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */; };
+		2766DEA01FAC56F20078AA5C /* AppendAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DE9F1FAC56F20078AA5C /* AppendAlbumViewController.m */; };
+		2766DEA11FAC56F20078AA5C /* AppendAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DE9F1FAC56F20078AA5C /* AppendAlbumViewController.m */; };
+		2766DEA41FAC570F0078AA5C /* AlbumViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DEA31FAC570F0078AA5C /* AlbumViewControllerManager.m */; };
+		2766DEA51FAC570F0078AA5C /* AlbumViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DEA31FAC570F0078AA5C /* AlbumViewControllerManager.m */; };
+		2766DEA81FAC57360078AA5C /* AlbumMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DEA71FAC57360078AA5C /* AlbumMoudleUtil.m */; };
+		2766DEA91FAC57360078AA5C /* AlbumMoudleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DEA71FAC57360078AA5C /* AlbumMoudleUtil.m */; };
+		2766DEB01FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DEAF1FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m */; };
+		2766DEB11FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2766DEAF1FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m */; };
 		27837A701FA96ABA0024A79B /* GetPhotoListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */; };
 		27837A711FA96ABA0024A79B /* GetPhotoListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */; };
 		27837A741FA96D020024A79B /* PhotoModelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 27837A731FA96D020024A79B /* PhotoModelList.m */; };
@@ -164,6 +172,12 @@
 		27A540041F8F41C2005E4164 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540031F8F41C2005E4164 /* PhotoTableViewCell.m */; };
 		27A540081F8F6145005E4164 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A540071F8F6145005E4164 /* PhotoDetailViewController.m */; };
 		27A5400B1F8F6A05005E4164 /* PhotoImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A5400A1F8F6A05005E4164 /* PhotoImageViewController.m */; };
+		27C0DAAB1FC2A23900B7C933 /* AppendAlbumPhotoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C0DAAA1FC2A23900B7C933 /* AppendAlbumPhotoControl.m */; };
+		27C0DAAC1FC2A23900B7C933 /* AppendAlbumPhotoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C0DAAA1FC2A23900B7C933 /* AppendAlbumPhotoControl.m */; };
+		27C0DAAF1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C0DAAE1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m */; };
+		27C0DAB01FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C0DAAE1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m */; };
+		27C0DAB31FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C0DAB21FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m */; };
+		27C0DAB41FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C0DAB21FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m */; };
 		27D1F4171F920327007DE94B /* ResentDialyListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F4161F920327007DE94B /* ResentDialyListRequest.m */; };
 		27D1F41A1F9206C2007DE94B /* DialyModelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F4191F9206C2007DE94B /* DialyModelList.m */; };
 		27D1F41D1F92077F007DE94B /* GetDialyListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1F41C1F92077F007DE94B /* GetDialyListRequest.m */; };
@@ -243,6 +257,14 @@
 		27658AB41F9F102D005B204C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27658AB91F9F1A19005B204C /* UIImage+SizeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SizeExtension.m"; sourceTree = "<group>"; };
 		27658ABA1F9F1A1A005B204C /* UIImage+SizeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SizeExtension.h"; sourceTree = "<group>"; };
+		2766DE9E1FAC56F20078AA5C /* AppendAlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppendAlbumViewController.h; sourceTree = "<group>"; };
+		2766DE9F1FAC56F20078AA5C /* AppendAlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendAlbumViewController.m; sourceTree = "<group>"; };
+		2766DEA21FAC570F0078AA5C /* AlbumViewControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumViewControllerManager.h; sourceTree = "<group>"; };
+		2766DEA31FAC570F0078AA5C /* AlbumViewControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumViewControllerManager.m; sourceTree = "<group>"; };
+		2766DEA61FAC57360078AA5C /* AlbumMoudleUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumMoudleUtil.h; sourceTree = "<group>"; };
+		2766DEA71FAC57360078AA5C /* AlbumMoudleUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumMoudleUtil.m; sourceTree = "<group>"; };
+		2766DEAE1FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppendAlbumSelectedPhotosViewController.h; sourceTree = "<group>"; };
+		2766DEAF1FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendAlbumSelectedPhotosViewController.m; sourceTree = "<group>"; };
 		27837A6E1FA96ABA0024A79B /* GetPhotoListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetPhotoListRequest.h; sourceTree = "<group>"; };
 		27837A6F1FA96ABA0024A79B /* GetPhotoListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetPhotoListRequest.m; sourceTree = "<group>"; };
 		27837A721FA96D020024A79B /* PhotoModelList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoModelList.h; sourceTree = "<group>"; };
@@ -339,6 +361,12 @@
 		27A540071F8F6145005E4164 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		27A540091F8F6A05005E4164 /* PhotoImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoImageViewController.h; sourceTree = "<group>"; };
 		27A5400A1F8F6A05005E4164 /* PhotoImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoImageViewController.m; sourceTree = "<group>"; };
+		27C0DAA91FC2A23900B7C933 /* AppendAlbumPhotoControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppendAlbumPhotoControl.h; sourceTree = "<group>"; };
+		27C0DAAA1FC2A23900B7C933 /* AppendAlbumPhotoControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppendAlbumPhotoControl.m; sourceTree = "<group>"; };
+		27C0DAAD1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectAlbumPhotosViewController.h; sourceTree = "<group>"; };
+		27C0DAAE1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectAlbumPhotosViewController.m; sourceTree = "<group>"; };
+		27C0DAB11FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectAlumbPhotoTableViewCell.h; sourceTree = "<group>"; };
+		27C0DAB21FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectAlumbPhotoTableViewCell.m; sourceTree = "<group>"; };
 		27D1F4151F920327007DE94B /* ResentDialyListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResentDialyListRequest.h; sourceTree = "<group>"; };
 		27D1F4161F920327007DE94B /* ResentDialyListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResentDialyListRequest.m; sourceTree = "<group>"; };
 		27D1F4181F9206C2007DE94B /* DialyModelList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialyModelList.h; sourceTree = "<group>"; };
@@ -485,6 +513,35 @@
 			path = AppInfo;
 			sourceTree = "<group>";
 		};
+		2766DE9C1FAC551B0078AA5C /* AlbumMoudle */ = {
+			isa = PBXGroup;
+			children = (
+				2766DE9D1FAC551B0078AA5C /* ViewController */,
+				2766DEA21FAC570F0078AA5C /* AlbumViewControllerManager.h */,
+				2766DEA31FAC570F0078AA5C /* AlbumViewControllerManager.m */,
+				2766DEA61FAC57360078AA5C /* AlbumMoudleUtil.h */,
+				2766DEA71FAC57360078AA5C /* AlbumMoudleUtil.m */,
+			);
+			path = AlbumMoudle;
+			sourceTree = "<group>";
+		};
+		2766DE9D1FAC551B0078AA5C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2766DE9E1FAC56F20078AA5C /* AppendAlbumViewController.h */,
+				2766DE9F1FAC56F20078AA5C /* AppendAlbumViewController.m */,
+				2766DEAE1FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.h */,
+				2766DEAF1FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m */,
+				27C0DAA91FC2A23900B7C933 /* AppendAlbumPhotoControl.h */,
+				27C0DAAA1FC2A23900B7C933 /* AppendAlbumPhotoControl.m */,
+				27C0DAAD1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.h */,
+				27C0DAAE1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m */,
+				27C0DAB11FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.h */,
+				27C0DAB21FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		279C94BF1F874A180061C8EE = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +564,7 @@
 		279C94CA1F874A180061C8EE /* CherryGrownDialy */ = {
 			isa = PBXGroup;
 			children = (
+				2766DE9C1FAC551B0078AA5C /* AlbumMoudle */,
 				27A53FF31F8F38CE005E4164 /* PhotoMoudle */,
 				27547DA81F89F3F60033288C /* DialyMoudle */,
 				279E31BB1F88D47F004C3531 /* HomePages */,
@@ -1074,6 +1132,7 @@
 				27658A5C1F9F0F15005B204C /* DialyModel.m in Sources */,
 				27658A5D1F9F0F15005B204C /* BaseNavigationViewController.m in Sources */,
 				27658A5E1F9F0F15005B204C /* AppendPhotoListViewController.m in Sources */,
+				2766DEA91FAC57360078AA5C /* AlbumMoudleUtil.m in Sources */,
 				27658A5F1F9F0F15005B204C /* TagSelectedControl.m in Sources */,
 				27658A601F9F0F15005B204C /* DialyInputViewController.m in Sources */,
 				27658A611F9F0F15005B204C /* PhotoImageViewController.m in Sources */,
@@ -1085,6 +1144,7 @@
 				27658A661F9F0F15005B204C /* NSString+SizeExtension.m in Sources */,
 				27658A671F9F0F15005B204C /* UserLoginViewController.m in Sources */,
 				27658A681F9F0F15005B204C /* CategorySelectedControl.m in Sources */,
+				27C0DAB01FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m in Sources */,
 				27658A691F9F0F15005B204C /* NetworkStatusUtil.m in Sources */,
 				27658A6A1F9F0F15005B204C /* CommonDataHelper.m in Sources */,
 				27658A6B1F9F0F15005B204C /* AppendPhotoStartViewController.m in Sources */,
@@ -1113,6 +1173,7 @@
 				27658A7E1F9F0F15005B204C /* ResentlyPhotoListTableViewController.m in Sources */,
 				27658A7F1F9F0F15005B204C /* SegmentBar.m in Sources */,
 				27658A801F9F0F15005B204C /* UIViewController+Segment.m in Sources */,
+				2766DEA51FAC570F0078AA5C /* AlbumViewControllerManager.m in Sources */,
 				27658A811F9F0F15005B204C /* DialyViewControllerManager.m in Sources */,
 				27658A821F9F0F15005B204C /* SegmentCell.m in Sources */,
 				27658A831F9F0F15005B204C /* JYJKRequestRetModel.m in Sources */,
@@ -1127,12 +1188,14 @@
 				27658A8A1F9F0F15005B204C /* CategoryListRequest.m in Sources */,
 				27658A8B1F9F0F15005B204C /* UIView+Segment_Size.m in Sources */,
 				27658ABC1F9F1DBB005B204C /* UIImage+SizeExtension.m in Sources */,
+				27C0DAAC1FC2A23900B7C933 /* AppendAlbumPhotoControl.m in Sources */,
 				27658A8C1F9F0F15005B204C /* UserLoginRequest.m in Sources */,
 				27658A8D1F9F0F15005B204C /* NSObject+WaitingHUB.m in Sources */,
 				27658A8E1F9F0F15005B204C /* CDBaseViewController.m in Sources */,
 				27658A8F1F9F0F15005B204C /* TagListResult.m in Sources */,
 				27658A901F9F0F15005B204C /* WelcomeViewController.m in Sources */,
 				27658A911F9F0F15005B204C /* PhotoDetailViewController.m in Sources */,
+				2766DEB11FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m in Sources */,
 				27658A921F9F0F15005B204C /* DialyStartViewController.m in Sources */,
 				27658A931F9F0F15005B204C /* DialyMoudleUtil.m in Sources */,
 				27658A941F9F0F15005B204C /* JYJKHttpUploadRequest.m in Sources */,
@@ -1147,6 +1210,8 @@
 				27658A9D1F9F0F15005B204C /* PhotoStartViewController.m in Sources */,
 				27658A9E1F9F0F15005B204C /* InitializeUtil.m in Sources */,
 				27658A9F1F9F0F15005B204C /* TagsSelectViewController.m in Sources */,
+				2766DEA11FAC56F20078AA5C /* AppendAlbumViewController.m in Sources */,
+				27C0DAB41FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m in Sources */,
 				27F6F1B81FA8598F003E6616 /* SDPieLoopProgressView.m in Sources */,
 				27658AA01F9F0F15005B204C /* PhotoMoudleUtil.m in Sources */,
 				27658AA11F9F0F15005B204C /* PhotoTableViewCell.m in Sources */,
@@ -1170,6 +1235,7 @@
 				27DA38181F8C6D6600E7E13A /* DialyModel.m in Sources */,
 				279E31C11F88D4B8004C3531 /* BaseNavigationViewController.m in Sources */,
 				27423EDA1F999EC100F08597 /* AppendPhotoListViewController.m in Sources */,
+				2766DEA81FAC57360078AA5C /* AlbumMoudleUtil.m in Sources */,
 				27547DC21F8A098F0033288C /* TagSelectedControl.m in Sources */,
 				27547DB51F89F4C60033288C /* DialyInputViewController.m in Sources */,
 				27A5400B1F8F6A05005E4164 /* PhotoImageViewController.m in Sources */,
@@ -1181,6 +1247,7 @@
 				2723F6091F8B46BD0036B919 /* NSString+SizeExtension.m in Sources */,
 				279C95161F8772860061C8EE /* UserLoginViewController.m in Sources */,
 				27547DB91F89F7100033288C /* CategorySelectedControl.m in Sources */,
+				27C0DAAF1FC2B3C700B7C933 /* SelectAlbumPhotosViewController.m in Sources */,
 				279C94FC1F87522B0061C8EE /* NetworkStatusUtil.m in Sources */,
 				279C94F91F8751E10061C8EE /* CommonDataHelper.m in Sources */,
 				27423ED71F9994B400F08597 /* AppendPhotoStartViewController.m in Sources */,
@@ -1209,6 +1276,7 @@
 				27A53FFE1F8F39AD005E4164 /* ResentlyPhotoListTableViewController.m in Sources */,
 				27DA380C1F8C687900E7E13A /* SegmentBar.m in Sources */,
 				27DA38111F8C687900E7E13A /* UIViewController+Segment.m in Sources */,
+				2766DEA41FAC570F0078AA5C /* AlbumViewControllerManager.m in Sources */,
 				27547DAC1F89F40C0033288C /* DialyViewControllerManager.m in Sources */,
 				27DA380D1F8C687900E7E13A /* SegmentCell.m in Sources */,
 				279E319C1F88ACB4004C3531 /* JYJKRequestRetModel.m in Sources */,
@@ -1223,12 +1291,14 @@
 				279E31B71F88C49F004C3531 /* CategoryListRequest.m in Sources */,
 				27DA38101F8C687900E7E13A /* UIView+Segment_Size.m in Sources */,
 				27658ABB1F9F1A1A005B204C /* UIImage+SizeExtension.m in Sources */,
+				27C0DAAB1FC2A23900B7C933 /* AppendAlbumPhotoControl.m in Sources */,
 				279E31A81F88B25E004C3531 /* UserLoginRequest.m in Sources */,
 				279C95231F8782DA0061C8EE /* NSObject+WaitingHUB.m in Sources */,
 				27547DB21F89F4580033288C /* CDBaseViewController.m in Sources */,
 				279E31BA1F88C606004C3531 /* TagListResult.m in Sources */,
 				279C94EC1F874CBD0061C8EE /* WelcomeViewController.m in Sources */,
 				27A540081F8F6145005E4164 /* PhotoDetailViewController.m in Sources */,
+				2766DEB01FAC6C820078AA5C /* AppendAlbumSelectedPhotosViewController.m in Sources */,
 				279E31C71F88D5AD004C3531 /* DialyStartViewController.m in Sources */,
 				27547DAF1F89F41E0033288C /* DialyMoudleUtil.m in Sources */,
 				274FA59D1F9A38CE0006B389 /* JYJKHttpUploadRequest.m in Sources */,
@@ -1243,6 +1313,8 @@
 				279E31CA1F88D5BB004C3531 /* PhotoStartViewController.m in Sources */,
 				279C94F61F8751630061C8EE /* InitializeUtil.m in Sources */,
 				2723F6001F8B18260036B919 /* TagsSelectViewController.m in Sources */,
+				2766DEA01FAC56F20078AA5C /* AppendAlbumViewController.m in Sources */,
+				27C0DAB31FC2C73200B7C933 /* SelectAlumbPhotoTableViewCell.m in Sources */,
 				27F6F1B11FA85809003E6616 /* SDPieLoopProgressView.m in Sources */,
 				27A53FFB1F8F396B005E4164 /* PhotoMoudleUtil.m in Sources */,
 				27A540041F8F41C2005E4164 /* PhotoTableViewCell.m in Sources */,

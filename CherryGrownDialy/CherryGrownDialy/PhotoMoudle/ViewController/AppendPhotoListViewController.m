@@ -150,11 +150,11 @@ static const NSInteger kMaxPhotoCount = 8;
             __block NSString* tags = nil;
             [tagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
                 if (!tags || tags.length == 0) {
-                    tags = [NSString stringWithFormat:@"%ld", tagModel.id];
+                    tags = [NSString stringWithFormat:@"%@", tagModel.name];
                 }
                 else
                 {
-                    tags = [tags stringByAppendingFormat:@",%ld", tagModel.id];
+                    tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
                 }
                 
             }];

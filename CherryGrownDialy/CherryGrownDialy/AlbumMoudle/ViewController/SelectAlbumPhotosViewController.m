@@ -1,18 +1,20 @@
 //
-//  PhotoStartViewController.m
+//  SelectAlbumPhotosViewController.m
 //  CherryGrownDialy
 //
-//  Created by yinquan on 2017/10/7.
+//  Created by yinquan on 2017/11/20.
 //  Copyright © 2017年 yinquan. All rights reserved.
 //
 
-#import "PhotoStartViewController.h"
-#import "PhotoTableViewCell.h"
+#import "SelectAlbumPhotosViewController.h"
+#import "SelectAlumbPhotoTableViewCell.h"
 
-@interface PhotoStartViewController ()
-<UITableViewDelegate,
-UITableViewDataSource,
-PhotoControlSelectDelegate>
+@interface SelectAlbumPhotosViewController ()
+<UITableViewDataSource,
+UITableViewDelegate>
+
+@property (nonatomic, strong) NSMutableArray<PhotoInfoModel*>* selectedPhotoModels;
+@property (nonatomic, strong) AppendAlbumSelectPhotosHandle selectHandle;
 
 @property (nonatomic, strong) CategorySelectedControl* categoryControl;
 @property (nonatomic, readonly) CategoryModel* categoryModel;
@@ -22,26 +24,45 @@ PhotoControlSelectDelegate>
 
 @property (nonatomic, strong) UITableView* photoTableView;
 
+
 @property (nonatomic, strong) NSMutableArray* photoModels;
 @property (nonatomic, assign) NSInteger totalCount;
 @end
 
-@implementation PhotoStartViewController
+
+
+@implementation SelectAlbumPhotosViewController
+
++ (void) showWithSelectedPhotos:(NSArray<PhotoInfoModel*>*) photoModels
+                   selectHandle:(AppendAlbumSelectPhotosHandle) handle
+{
+    SelectAlbumPhotosViewController* photosViewController = [[SelectAlbumPhotosViewController alloc] initWithSelectedPhotos:photoModels selectHandle:handle];
+    BaseNavigationViewController* navigationController = [[BaseNavigationViewController alloc] initWithRootViewController:photosViewController];
+    UIViewController* topMostViewController = [[ViewControllerManager defaultManager] topMostViewController];
+    [topMostViewController presentViewController:navigationController animated:YES completion:nil];
+    
+}
+
+- (id) initWithSelectedPhotos:(NSArray<PhotoInfoModel*>*) photoModels
+                 selectHandle:(AppendAlbumSelectPhotosHandle) handle
+{
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _selectedPhotoModels = [NSMutableArray arrayWithArray:photoModels];
+        _selectHandle = handle;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"照片";
+    self.navigationItem.title = @"选择照片";
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self layoutElements];
     
-    //[self makeTestPhotoData];
-    
-    //添加照片按钮
-    UIBarButtonItem* appendBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(appendPhotoButtonClicked:)];
-    [self.navigationItem setRightBarButtonItem:appendBarButton];
-    
     [self startLoadPhotoList];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -120,18 +141,6 @@ PhotoControlSelectDelegate>
     [PhotoMoudleUtil startGetPhotoList:0 rows:20 cateId:cateId tags:tags observiceObject:self resultSelector:@selector(photoListLoaded:) returnSelector:@selector(photoListReturn:)];
 }
 
-- (void) makeTestPhotoData{
-    NSMutableArray* models = [NSMutableArray array];
-    for (NSInteger index = 0; index < 35; ++index)
-    {
-        PhotoInfoModel* model = [[PhotoInfoModel alloc] init];
-        model.thumbUrl = @"http://oeimg2.cache.oeeee.com/201308/13/5209874b7de8c.jpg";
-        model.imageUrl = @"http://oeimg2.cache.oeeee.com/201308/13/5209874b7de8c.jpg";
-        model.id = index + 0x230;
-        [models addObject:model];
-    }
-    _photoModels = [NSMutableArray arrayWithArray:models];
-}
 
 #pragma mark - control click event
 - (void) categoryControlClicked:(id) sender
@@ -192,9 +201,9 @@ PhotoControlSelectDelegate>
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoTableViewCell"];
+    SelectAlumbPhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoTableViewCell"];
     if (!cell) {
-        cell = [[PhotoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PhotoTableViewCell"];
+        cell = [[SelectAlumbPhotoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PhotoTableViewCell"];
     }
     // Configure the cell...
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -209,7 +218,7 @@ PhotoControlSelectDelegate>
     NSArray* photos = [self.photoModels subarrayWithRange:subRange];
     [cell setPhotoInfos:photos];
     [cell setCellRow:indexPath.row];
-    [cell setSelectDelegate:self];
+//    [cell setSelectDelegate:self];
     return cell;
 }
 
@@ -270,11 +279,6 @@ PhotoControlSelectDelegate>
     {
         [self.photoTableView.mj_footer endRefreshingWithNoMoreData];
     }
-}
-
-#pragma mark - PhotoControlSelectDelegate
-- (void) photoControlSelect:(NSInteger) selectIndex{
-    [PhotoViewControllerManager entryPhotoDetailPage:self.photoModels currentIndex:selectIndex];
 }
 
 #pragma mark - Request CallBack

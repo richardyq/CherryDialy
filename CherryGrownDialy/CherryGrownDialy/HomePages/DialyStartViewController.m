@@ -113,10 +113,10 @@ UITableViewDataSource>
     if(self.selectedTagModels){
         [self.selectedTagModels enumerateObjectsUsingBlock:^(TagModel* tagModel, NSUInteger idx, BOOL * _Nonnull stop) {
             if (!tags || tags.length == 0) {
-                tags = [NSString stringWithFormat:@"%ld", (long)tagModel.id];
+                tags = [NSString stringWithFormat:@"%@", tagModel.name];
             }
             else{
-                tags = [tags stringByAppendingFormat:@",%ld", (long)tagModel.id];
+                tags = [tags stringByAppendingFormat:@",%@", tagModel.name];
             }
         }];
     }
@@ -215,6 +215,12 @@ UITableViewDataSource>
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DialyModel* model = self.dialyModels[indexPath.row];
+    [DialyViewControllerManager entryDialyDetailPage:model.id];
 }
 
 #pragma mark - settingAndGetting
